@@ -155,4 +155,12 @@ NaviCast là **ứng dụng độc lập của bên thứ ba**. NaviCast **khôn
 
 ---
 
+## 12. Tài sản bên thứ ba
+
+Một số biểu tượng điều hướng (mũi tên rẽ, vòng xuyến, đường nhánh, ngã ba) lấy từ bộ icon **Google Material Symbols**, phân phối theo [Giấy phép Apache 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE). Bộ icon được dùng nguyên bản (chỉ scale để vừa màn hình đồng hồ, không sửa path data). Material Symbols thuộc bản quyền © Google LLC và các tác giả Material Design.
+
+NaviCast không sử dụng nhãn hiệu Google (tên Google hoặc logo Google) ở bất kỳ vị trí nào trong thương hiệu, marketing hay sự hiện diện trên store.
+
+---
+
 *Chính sách này được viết bằng tiếng Việt phổ thông. Bản tiếng Anh tại [privacy-policy-en.md](privacy-policy-en.md). Hai phiên bản có giá trị pháp lý tương đương; trong trường hợp có khác biệt, bản tiếng Việt áp dụng cho người dùng tại Việt Nam, bản tiếng Anh áp dụng cho khu vực khác.*

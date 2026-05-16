@@ -155,4 +155,12 @@ NaviCast is an **independent third-party companion app**. It is **not affiliated
 
 ---
 
+## 12. Third-party assets
+
+Some maneuver icons (turn arrows, roundabouts, ramps, forks) are derived from the **Google Material Symbols** icon set, distributed under the [Apache License 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE). The icon set is used as-is (scaled to fit watch displays, no path data modified). Material Symbols are © Google LLC and Material Design Authors.
+
+NaviCast does not use Google trademarks (the Google name or logo) anywhere in its branding, marketing, or store presence.
+
+---
+
 *This policy is written in plain English. The Vietnamese version is at [privacy-policy-vi.md](privacy-policy-vi.md). Both versions are legally equivalent; in case of disagreement, the Vietnamese version controls for users in Vietnam, the English version controls elsewhere.*
