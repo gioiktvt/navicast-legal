@@ -1,0 +1,14 @@
+theme: jekyll-theme-cayman
+title: NaviCast Legal Documents
+description: Privacy Policy, Data Safety, and Trademark Disclaimer for the NaviCast Android app.
+url: "https://gioiktvt.github.io"
+baseurl: "/navicast-legal"
+
+show_downloads: false
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .gitignore
