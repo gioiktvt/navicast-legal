@@ -8,6 +8,7 @@ Served via GitHub Pages: <https://gioiktvt.github.io/navicast-legal/>
 |---|---|
 | Privacy Policy (English) | <https://gioiktvt.github.io/navicast-legal/privacy-policy.html> |
 | Chính sách Bảo mật (Tiếng Việt) | <https://gioiktvt.github.io/navicast-legal/privacy-policy-vi.html> |
+| 隐私政策 (简体中文) | <https://gioiktvt.github.io/navicast-legal/privacy-policy-zh.html> |
 | Data Safety Form | <https://gioiktvt.github.io/navicast-legal/data-safety.html> |
 | Trademark Disclaimer | <https://gioiktvt.github.io/navicast-legal/trademark.html> |
 

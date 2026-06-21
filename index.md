@@ -12,6 +12,7 @@ NaviCast is a free Android companion app that forwards turn-by-turn navigation i
 
 - [Privacy Policy (English)](privacy-policy.html)
 - [Chính sách Bảo mật (Tiếng Việt)](privacy-policy-vi.html)
+- [隐私政策 (简体中文)](privacy-policy-zh.html)
 - [Data Safety Form](data-safety.html)
 - [Trademark Disclaimer](trademark.html)
 

@@ -11,7 +11,7 @@ lang: en
 **Application ID**: `com.gioitv.navicast`
 **Developer**: gioitv (gioitv86@gmail.com)
 **Effective date**: 2026-05-08
-**Last updated**: 2026-05-08
+**Last updated**: 2026-06-20
 
 ---
 
@@ -25,6 +25,7 @@ If you read nothing else, read this:
 - ❌ No notification content (text, addresses, ETA, place names) is ever uploaded, stored on a server, or shared with third parties.
 - ❌ No location, contacts, microphone, camera, SMS, or storage access.
 - ✅ Reads Google Maps notifications (only) on your device, converts them to a watch-friendly notification, posts it locally so Huawei Health can forward to your watch.
+- 💳 NaviCast is free to try. After a free trial period, a **one-time in-app purchase** unlocks the app permanently. The purchase is processed entirely by **Google Play Billing** — NaviCast never sees, handles, or stores your payment-card details, and no purchase is tied to any account we hold (we hold none).
 
 ---
 
@@ -41,6 +42,8 @@ If you read nothing else, read this:
 | Device identifiers (IMEI, advertising ID) | ❌ No | App does **not** read device IDs |
 | Crash reports, analytics, diagnostics | ❌ No | NaviCast ships without Firebase, Crashlytics, Sentry, or any analytics SDK |
 | Files, photos, media | ❌ No | Storage permission is **not requested** |
+| Payment / card details | ❌ No | One-time purchases are processed by **Google Play Billing**. NaviCast never receives your card number, billing address, or any payment instrument data. |
+| Purchase status | ⚠️ On-device only | After you buy, NaviCast stores a local "unlocked" flag and queries Google Play to confirm your entitlement. This flag is not personal data and is not transmitted to us (we run no server). |
 
 **App settings** (watch model preset, distance unit, language, theme, vibration toggle, onboarding completion flag) are stored locally on your device using Android Jetpack DataStore in the app's private storage area. These settings:
 - Never leave your device.
@@ -58,6 +61,7 @@ NaviCast requests **only** the minimum permissions needed to do its job:
 | `BIND_NOTIFICATION_LISTENER_SERVICE` | To read Google Maps' navigation notification on your phone. This is the **only** way to know when a maneuver is coming. The system enforces this via the "Notification access" toggle in Settings — you control when NaviCast can read notifications. |
 | `POST_NOTIFICATIONS` (Android 13+) | To create a local notification with the maneuver icon, which Huawei Health forwards to your watch. |
 | `FOREGROUND_SERVICE` + `FOREGROUND_SERVICE_SPECIAL_USE` | To keep our notification listener alive during navigation (Android otherwise kills it after a few minutes on some devices). |
+| `com.android.vending.BILLING` | To offer the one-time in-app purchase that unlocks the app after the free trial, via Google Play Billing. No payment data is handled by NaviCast. |
 
 We do **not** request: location, contacts, SMS, microphone, camera, storage, Bluetooth, phone state, or "query all packages".
 
@@ -70,12 +74,14 @@ When this is off, NaviCast cannot read any notification, including Google Maps. 
 
 ## 4. Third-party services
 
-NaviCast uses **no third-party services**. Specifically:
-- ❌ No Firebase, Google Analytics, or any Google Play Services SDK beyond standard Android system services.
+NaviCast uses only **one** third-party service — Google Play Billing, for purchases. Specifically:
+- ❌ No Firebase, Google Analytics, or any Google Play Services SDK beyond standard Android system services and billing.
 - ❌ No Crashlytics, Sentry, Bugsnag, or other crash reporters.
 - ❌ No advertising SDKs.
-- ❌ No payment processors.
 - ❌ No social login.
+- ✅ **Google Play Billing** — used solely to process the one-time in-app purchase that unlocks the app after the free trial.
+
+**Google Play Billing.** When you choose to buy, NaviCast hands you off to the Google Play Store app, which collects and processes your payment entirely on its side. NaviCast receives back only a purchase token / entitlement state confirming the unlock — never your card number, billing address, or any payment instrument. Google's handling of that payment data is governed by **Google's Privacy Policy** (https://policies.google.com/privacy), not by us.
 
 NaviCast interacts with **Huawei Health** only indirectly: it posts a regular Android notification, and Huawei Health (which you install and configure separately) reads it the same way it reads any other notification. We don't use Huawei Health's APIs directly.
 
@@ -90,6 +96,8 @@ Specifically:
 - We do not share with advertisers.
 - We do not share with analytics providers.
 - We do not share with law enforcement (we have no data to provide).
+
+The single exception is **payment processing**: if you make a purchase, your payment is handled directly between you and **Google Play**, under Google's own privacy policy. NaviCast neither receives nor forwards that payment data — we only learn whether the unlock succeeded.
 
 ---
 
@@ -117,8 +125,8 @@ NaviCast follows defensive security practices:
 - All processing is **on-device only**. There is no server.
 - Notification content is held in volatile memory (RAM) for the duration of one navigation session, then released.
 - No notification content is logged in release builds (verified by source code audit + ProGuard rules).
-- The signed release APK is built reproducibly via GitHub Actions; the signing key never leaves Anh Giới's developer environment / GitHub Actions encrypted secrets.
-- Source code is closed-source but audited by Architect / Security agents before each release.
+- The signed release APK is built via an automated CI pipeline; the signing key never leaves the developer's secured environment.
+- Source code is closed-source and reviewed before each release.
 
 ---
 
@@ -138,7 +146,6 @@ You can check the current version at: `https://gioiktvt.github.io/navicast-legal
 For questions, requests, or concerns about this Privacy Policy:
 
 - **Email**: gioitv86@gmail.com
-- **GitHub issue tracker**: https://github.com/gioiktvt/navicast/issues (private repo — open by request)
 
 Please use English or Vietnamese.
 
@@ -152,14 +159,6 @@ Please use English or Vietnamese.
 "Huawei", "Huawei Health", "Huawei Watch", "Huawei Band", "Huawei Watch GT", "Huawei Watch Fit" are trademarks of Huawei Technologies Co., Ltd.
 
 NaviCast is an **independent third-party companion app**. It is **not affiliated with, endorsed by, or sponsored by** Google, Vietmap, Waze, or Huawei. NaviCast does not use these companies' APIs (other than reading public Android notifications, which any user-installed app with notification access can do).
-
----
-
-## 12. Third-party assets
-
-Some maneuver icons (turn arrows, roundabouts, ramps, forks) are derived from the **Google Material Symbols** icon set, distributed under the [Apache License 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE). The icon set is used as-is (scaled to fit watch displays, no path data modified). Material Symbols are © Google LLC and Material Design Authors.
-
-NaviCast does not use Google trademarks (the Google name or logo) anywhere in its branding, marketing, or store presence.
 
 ---
 
