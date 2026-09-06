@@ -8,7 +8,7 @@ lang: en
 # NaviCast — Data Safety
 
 **App**: NaviCast (`com.gioitv.navicast`)
-**Last updated**: 2026-06-20
+**Last updated**: 2026-09-06
 
 This page summarizes, for transparency, what NaviCast declares in the Google Play
 "Data safety" section. The short version: **NaviCast collects and shares no user data.**
@@ -19,21 +19,29 @@ This page summarizes, for transparency, what NaviCast declares in the Google Pla
 
 | Question | Answer |
 |---|---|
-| Does the app collect or share any of the required user data types? | **No** |
-| Is collected data encrypted in transit? | N/A — no data is transmitted |
-| Can users request that their data be deleted? | N/A — no data is collected |
+| Does the app collect or share any of the required user data types? | **Yes — location only, on the Ultimate tier** |
+| Is collected data encrypted in transit? | **Yes** — all mapping endpoints are HTTPS |
+| Can users request that their data be deleted? | N/A — nothing is stored off-device; revoking the location permission stops all transmission |
 
-NaviCast has no user account, no analytics, and no advertising SDKs. It does not
-read location, contacts, SMS, microphone, camera, calendar, or storage. It reads
-Google Maps navigation notifications **only on your device**, turns them into a
-local notification for your watch, and discards the original content. Nothing is
-transmitted to any server (the app has no server).
+NaviCast has no user account, no analytics, and no advertising SDKs. It does not read
+contacts, SMS, microphone, camera, calendar, or storage. It reads Google Maps navigation
+notifications **only on your device**, turns them into a local notification for your watch,
+and discards the original content. **Notification content is never transmitted anywhere.**
+
+**Location is the one exception, and only on the Ultimate tier.** Its live map and standalone
+navigation read precise location once the user enables that feature, and send coordinates to
+open-source mapping services — `api.maptiler.com` / `tiles.openfreemap.org` for tiles,
+`valhalla1.openstreetmap.de` for routing, `photon.komoot.io` for place search and reverse
+geocoding. Under Google's definition, data transmitted off the device is *collected*; these are
+public services rather than contracted processors, so *shared* is declared as well. Purpose:
+**App functionality**. Optional. No background location. NaviCast operates no server of its own
+and retains no location history off-device. The Standard and Pro tiers never request location.
 
 ---
 
 ## Data types (Google Play taxonomy)
 
-For every data type Google Play lists, NaviCast's answer is **Not collected / Not shared**:
+For every data type Google Play lists except location, NaviCast's answer is **Not collected / Not shared**:
 
 | Category | Collected? | Shared? |
 |---|---|---|
@@ -50,9 +58,10 @@ For every data type Google Play lists, NaviCast's answer is **Not collected / No
 | Web browsing history | ❌ No | ❌ No |
 | App info & performance (crash logs, diagnostics) | ❌ No | ❌ No |
 | Device or other IDs | ❌ No | ❌ No |
-| Location (approximate or precise) | ❌ No | ❌ No |
+| **Location (approximate and precise)** | ✅ **Yes** — Ultimate tier only | ✅ **Yes** — to the mapping services above |
 
-→ All data types: **not collected, not shared.**
+→ All data types except **location**: not collected, not shared. Location: collected and shared,
+for **App functionality**, optional, Ultimate tier only, encrypted in transit.
 
 ---
 
