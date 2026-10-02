@@ -124,6 +124,22 @@ NaviCast uses Google Play Billing for purchases, and — on the Ultimate tier on
 
 NaviCast interacts with **Huawei Health** only indirectly: it posts a regular Android notification, and Huawei Health (which you install and configure separately) reads it the same way it reads any other notification. We don't use Huawei Health's APIs directly.
 
+Besides Huawei watches, NaviCast supports **Amazfit watches running Zepp OS**. The watch side is a small Zepp OS mini program, also called NaviCast, distributed through the Zepp Store.
+**Zepp OS does not let an Android app push data to the watch**, so on Amazfit the watch is the side that asks:
+1. The NaviCast Android app opens a listener bound to `127.0.0.1` on your phone. `127.0.0.1` is loopback — it means *this same phone*. That listener is not reachable from your Wi-Fi, from the Internet, or from any other device.
+2. The NaviCast Side Service — a piece of JavaScript that runs **inside the Zepp app, on that same phone** — reads the current direction from that loopback listener over plain HTTP. Every request must carry the **6-character pairing code** you type once in the Zepp app (Zepp → NaviCast settings); a request without the right code is refused.
+3. The Zepp app hands the result to the watch over its own **Bluetooth** link. The mini program asks for an update roughly once a second, and only while you have it open on the watch. So the only hop that leaves your phone is the Bluetooth link the Zepp app manages anyway.
+**No navigation data is sent to any server of ours — we do not operate one — and NaviCast uses no Zepp cloud service.** The loopback listener is open only while NaviCast is forwarding, and carries only the current turn, the distance to it, the street name, the arrival time, and — on the Ultimate tier, if you enabled the map — the map image or route line the phone has already drawn.
+
+**The watch mini program declares exactly two permissions, and nothing else:**
+
+| Permission | Why we need it |
+|---|---|
+| `data:os.device.info` | Read the screen size and shape so the layout is right on each watch model — Zepp OS spans round and square screens in eight resolutions. |
+| `device:os.local_storage` | Keep your display choices on the watch between sessions (language, battery saver, vehicle type) and remember that you accepted the privacy notice, so it is not shown again. |
+
+The mini program **does not request and cannot read** location, heart rate, or any other health sensor; it has no network access of its own; and it stores nothing beyond the preferences above. Where location is used at all, it is read by the **phone** app only — see section 2b.
+The pairing code you type stays in the **Zepp app's** own settings, on your phone. Uninstalling the mini program, or the phone app, removes everything NaviCast kept.
 ---
 
 ## 5. Data sharing
