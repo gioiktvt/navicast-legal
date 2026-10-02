@@ -140,6 +140,7 @@ Besides Huawei watches, NaviCast supports **Amazfit watches running Zepp OS**. T
 
 The mini program **does not request and cannot read** location, heart rate, or any other health sensor; it has no network access of its own; and it stores nothing beyond the preferences above. Where location is used at all, it is read by the **phone** app only — see section 2b.
 The pairing code you type stays in the **Zepp app's** own settings, on your phone. Uninstalling the mini program, or the phone app, removes everything NaviCast kept.
+
 ---
 
 ## 5. Data sharing
