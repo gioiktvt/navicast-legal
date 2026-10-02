@@ -123,6 +123,23 @@ NaviCast dùng Google Play Billing để xử lý giao dịch, và — chỉ ở
 
 NaviCast tương tác với **Huawei Health** chỉ gián tiếp: post 1 Android notification thông thường; Huawei Health (bạn cài + cấu hình riêng) đọc nó như đọc bất kỳ notification nào khác. App không dùng API của Huawei Health trực tiếp.
 
+Ngoài đồng hồ Huawei, NaviCast còn hỗ trợ **đồng hồ Amazfit chạy Zepp OS**. Phần trên đồng hồ là một mini program Zepp OS, cũng tên NaviCast, phát hành qua Zepp Store.
+**Zepp OS không cho ứng dụng Android đẩy dữ liệu sang đồng hồ**, nên với Amazfit thì đồng hồ là bên chủ động vào lấy:
+
+1. Ứng dụng NaviCast trên điện thoại mở một cổng chỉ nghe ở `127.0.0.1`. `127.0.0.1` là địa chỉ loopback — nghĩa là *chính cái điện thoại này*. Cổng đó không thể truy cập từ Wi-Fi của bạn, từ Internet, hay từ bất kỳ thiết bị nào khác.
+2. Side Service của NaviCast — một đoạn JavaScript chạy **bên trong ứng dụng Zepp, trên cùng chiếc điện thoại đó** — đọc chỉ đường hiện tại qua cổng loopback này bằng HTTP thường. Mỗi lần đọc đều phải kèm **mã ghép nối 6 ký tự** mà bạn nhập một lần trong ứng dụng Zepp (Zepp → cài đặt
+   NaviCast); không đúng mã thì bị từ chối.
+3. Ứng dụng Zepp chuyển kết quả sang đồng hồ qua kết nối **Bluetooth** của chính nó. Mini program hỏi khoảng mỗi giây một lần, và chỉ khi bạn đang mở nó trên đồng hồ. Vì vậy chặng duy nhất rời khỏi điện thoại là chặng Bluetooth mà ứng dụng Zepp vốn đã lo.
+**Không có dữ liệu dẫn đường nào được gửi tới máy chủ nào của chúng tôi — chúng tôi không vận hành máy chủ nào — và NaviCast không dùng dịch vụ đám mây nào của Zepp.** Cổng loopback chỉ mở trong lúc NaviCast đang chuyển tiếp, và chỉ chứa hướng rẽ hiện tại, khoảng cách tới khúc rẽ, tên đường, thời
+gian tới đích, và — ở bản Ultimate nếu bạn đã bật bản đồ — ảnh bản đồ hoặc đường tuyến mà điện thoại đã vẽ xong.
+**Mini program trên đồng hồ khai đúng hai quyền, không có gì thêm:**
+| Quyền | Dùng để làm gì |
+|---|---|
+| `data:os.device.info` | Đọc kích thước và hình dạng màn hình để vẽ bố cục đúng cho từng đời đồng hồ — Zepp OS có cả màn tròn lẫn màn vuông, tám lớp độ phân giải. |
+| `device:os.local_storage` | Giữ lựa chọn hiển thị trên đồng hồ giữa các lần mở (ngôn ngữ, chế độ tiết kiệm pin, loại phương tiện) và ghi nhận bạn đã đồng ý thông báo quyền riêng tư để lần sau không hỏi lại. |
+Mini program **không xin và không thể đọc** vị trí, nhịp tim hay bất kỳ cảm biến sức khoẻ nào; không có đường ra mạng riêng; và không lưu gì ngoài các lựa chọn nêu trên. Nơi nào có dùng vị trí thì đó là **ứng dụng trên điện thoại** đọc, xem mục 2b.
+Mã ghép nối bạn nhập được **ứng dụng Zepp** giữ trong phần cài đặt của chính nó, trên điện thoại của bạn. Gỡ mini program, hoặc gỡ ứng dụng trên điện thoại, là xoá hết những gì NaviCast đã lưu.
+
 ---
 
 ## 5. Chia sẻ dữ liệu
