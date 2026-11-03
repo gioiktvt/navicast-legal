@@ -6,7 +6,9 @@ permalink: /
 
 # NaviCast — Legal Documents
 
-NaviCast is a free Android companion app that forwards turn-by-turn navigation icons from your phone to your Huawei smartwatch via Huawei Health.
+NaviCast sends turn-by-turn navigation from your phone to your smartwatch, on Android and iPhone.
+
+Support: gioitv86@gmail.com
 
 ## Documents
 
@@ -20,7 +22,7 @@ NaviCast is a free Android companion app that forwards turn-by-turn navigation i
 
 - **App name**: NaviCast
 - **Application ID**: `com.gioitv.navicast`
-- **Developer**: gioitv (gioitv86@gmail.com)
+- **Developer**: TRAN VAN GIOI (gioitv86@gmail.com)
 - **Source repository**: <https://github.com/gioiktvt/navicast> (private)
 
 ---

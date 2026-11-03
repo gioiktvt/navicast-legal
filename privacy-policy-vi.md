@@ -9,13 +9,15 @@ lang: vi
 
 **Tên ứng dụng**: NaviCast
 **Application ID**: `com.gioitv.navicast`
-**Nhà phát triển**: gioitv (gioitv86@gmail.com)
+**Nhà phát triển**: TRAN VAN GIOI (gioitv86@gmail.com)
 **Ngày hiệu lực**: 2026-05-08
-**Cập nhật lần cuối**: 2026-09-06
+**Cập nhật lần cuối**: 2026-11-03
 
 ---
 
 ## 1. Tóm tắt nhanh
+
+**Bạn dùng iPhone? Hãy đọc mục 2c.** Phần tóm tắt này nói về bản Android.
 
 NaviCast là ứng dụng Android đi kèm điện thoại, chuyển biểu tượng dẫn đường (rẽ trái, rẽ phải, vòng xuyến…) từ Google Maps lên đồng hồ thông minh đã ghép nối. Hiện hỗ trợ đồng hồ Huawei, qua Huawei Health và Huawei Wear Engine.
 
@@ -86,6 +88,27 @@ Dịch vụ tiền cảnh loại `location` chỉ chạy khi bạn bấm **Bắt
 **Dừng**. Tắt bản đồ, hoặc thu hồi quyền vị trí trong Cài đặt Android, là dừng hoàn toàn việc này.
 
 
+## 2c. Ứng dụng trên iPhone
+
+Bản iPhone của NaviCast là **ứng dụng tự dẫn đường**. iOS không cho app đọc thông báo của app khác, nên
+mọi nội dung về đọc thông báo Google Maps trong chính sách này chỉ áp dụng cho Android. Trên iPhone:
+
+- **Vị trí** (chính xác) dùng để hiện chỗ bạn đang đứng, tính tuyến và bám tuyến. Chỉ chạy nền **trong
+  lúc đang dẫn đường**, và dừng khi bạn bấm Dừng hoặc tới nơi.
+- **Vị trí và tên địa điểm bạn tìm được gửi tới các dịch vụ bản đồ nêu ở mục 2b**, chỉ để vẽ bản đồ, tính
+  tuyến, tìm địa điểm và đọc giới hạn tốc độ. NaviCast không có máy chủ riêng và không lưu lịch sử chuyến đi.
+- **Bluetooth** chỉ dùng để gửi chỉ đường sang đồng hồ HUAWEI đã ghép đôi của chính bạn, qua kết nối đồng
+  hồ do ứng dụng HUAWEI Sức khỏe quản lý.
+- **Thông báo** là tuỳ chọn. Khi app đồng hồ không chạy, mỗi khúc rẽ được đăng thành thông báo cục bộ
+  thường (khoảng cách và tên đường), iOS tự chuyển sang đồng hồ đã ghép đôi. Không gửi lên máy chủ nào, và
+  bạn tắt được trong Cài đặt.
+- **Địa chỉ đã lưu** nằm trên iPhone của bạn và bị xoá khi gỡ ứng dụng.
+- Việc mua (dùng thử và bản đầy đủ) do Apple xử lý hoàn toàn. NaviCast không bao giờ thấy thông tin thanh toán của bạn.
+- Không có tài khoản, không quảng cáo, không phân tích, không theo dõi.
+
+---
+
+
 ## 3. Quyền yêu cầu
 
 NaviCast chỉ xin **đúng tối thiểu** quyền cần để hoạt động:
@@ -117,6 +140,7 @@ NaviCast dùng Google Play Billing để xử lý giao dịch, và — chỉ ở
 - ❌ Không đăng nhập mạng xã hội.
 - ✅ **Google Play Billing** — chỉ dùng để xử lý giao dịch mua một lần mở khoá ứng dụng sau thời gian dùng thử.
 - ✅ **Huawei IAP** — vai trò như Google Play Billing, cho bản cài từ AppGallery.
+- ✅ **Apple In-App Purchase** — vai trò giống Google Play Billing, cho bản iPhone.
 - ✅ **MapTiler / OpenFreeMap, Valhalla, Photon** — chỉ bản Ultimate, dùng cho ô bản đồ, định tuyến và tìm địa điểm. Các dịch vụ này nhận toạ độ của bạn trong lúc dẫn đường. Xem mục 2b.
 
 **Google Play Billing.** Khi bạn chọn mua, NaviCast chuyển bạn sang ứng dụng Google Play Store; Play Store thu thập và xử lý thanh toán hoàn toàn ở phía họ. NaviCast chỉ nhận lại một purchase token / trạng thái quyền xác nhận đã mở khoá — không bao giờ nhận số thẻ, địa chỉ thanh toán hay phương tiện thanh toán. Việc Google xử lý dữ liệu thanh toán đó tuân theo **Chính sách Bảo mật của Google** (https://policies.google.com/privacy), không phải của chúng tôi.

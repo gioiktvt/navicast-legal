@@ -9,13 +9,15 @@ lang: en
 
 **App name**: NaviCast
 **Application ID**: `com.gioitv.navicast`
-**Developer**: gioitv (gioitv86@gmail.com)
+**Developer**: TRAN VAN GIOI (gioitv86@gmail.com)
 **Effective date**: 2026-05-08
-**Last updated**: 2026-09-06
+**Last updated**: 2026-11-03
 
 ---
 
 ## 1. Summary
+
+**Using an iPhone? Section 2c applies to you.** The rest of this summary describes the Android app.
 
 NaviCast is an Android companion app that forwards turn-by-turn navigation icons from your phone to your paired smartwatch. Watch support currently covers Huawei devices, over Huawei Health and Huawei Wear Engine.
 
@@ -87,6 +89,29 @@ press **Stop**. Turning the map off, or revoking the location permission in Andr
 this completely.
 
 
+## 2c. The iPhone app
+
+The iPhone version of NaviCast is a **standalone navigation app**. iOS does not let an app read other
+apps' notifications, so everything about reading Google Maps notifications in this policy applies to
+Android only. On iPhone:
+
+- **Location** (precise) is used to show where you are, build the route and follow it. It runs in the
+  background **only during an active trip**, and stops when you press Stop or arrive.
+- **Your position and the place names you search for are sent to the mapping services listed in
+  section 2b**, solely to draw the map, build the route, find places and read speed limits. NaviCast
+  has no server of its own and keeps no trip history.
+- **Bluetooth** is used only to send directions to your own paired HUAWEI watch, through the watch
+  connection already managed by the HUAWEI Health app.
+- **Notifications** are optional. If the watch app is not running, each turn is posted as an ordinary
+  local notification (distance and street name), which iOS passes to your paired watch. It is never
+  sent to any server, and you can turn it off in Settings.
+- **Saved places** stay on your iPhone and are removed when you delete the app.
+- Purchases (the free trial and the full version) are handled entirely by Apple. NaviCast never sees your payment details.
+- There is no account, no advertising, no analytics and no tracking.
+
+---
+
+
 ## 3. Permissions we request
 
 NaviCast requests **only** the minimum permissions needed to do its job:
@@ -118,6 +143,7 @@ NaviCast uses Google Play Billing for purchases, and — on the Ultimate tier on
 - ❌ No social login.
 - ✅ **Google Play Billing** — used solely to process the one-time in-app purchase that unlocks the app after the free trial.
 - ✅ **Huawei IAP** — the same role as Google Play Billing, for installs from AppGallery.
+- ✅ **Apple In-App Purchase** — the same role as Google Play Billing, for the iPhone app.
 - ✅ **MapTiler / OpenFreeMap, Valhalla, Photon** — Ultimate tier only, for map tiles, routing and place search. These receive your coordinates while you navigate. See section 2b.
 
 **Google Play Billing.** When you choose to buy, NaviCast hands you off to the Google Play Store app, which collects and processes your payment entirely on its side. NaviCast receives back only a purchase token / entitlement state confirming the unlock — never your card number, billing address, or any payment instrument. Google's handling of that payment data is governed by **Google's Privacy Policy** (https://policies.google.com/privacy), not by us.
