@@ -8,7 +8,6 @@ lang: vi
 # Chính sách Bảo mật — NaviCast
 
 **Tên ứng dụng**: NaviCast
-**Application ID**: `com.gioitv.navicast`
 **Nhà phát triển**: Tri Tue Viet (Tran Van Gioi) (gioitv86@gmail.com)
 **Ngày hiệu lực**: 2026-05-08
 **Cập nhật lần cuối**: 2026-11-04
@@ -19,11 +18,11 @@ lang: vi
 
 **Bạn dùng iPhone? Hãy đọc mục 2c.** Phần tóm tắt này nói về bản Android.
 
-NaviCast là ứng dụng Android đi kèm điện thoại, chuyển biểu tượng dẫn đường (rẽ trái, rẽ phải, vòng xuyến…) từ Google Maps lên đồng hồ thông minh đã ghép nối. Hiện hỗ trợ đồng hồ Huawei, qua Huawei Health và Huawei Wear Engine.
+NaviCast là ứng dụng Android đi kèm điện thoại, chuyển biểu tượng dẫn đường (rẽ trái, rẽ phải, vòng xuyến…) từ Google Maps lên đồng hồ thông minh đã ghép nối. Hỗ trợ đồng hồ Huawei và Amazfit.
 
 **Nội dung thông báo — chữ hướng rẽ, địa chỉ, thời gian tới nơi, tên địa điểm mà NaviCast đọc — không bao giờ được thu thập, lưu trữ hay truyền ra khỏi thiết bị của bạn, ở bất kỳ phiên bản nào.** Nó được xử lý cục bộ rồi bỏ đi.
 
-Thứ duy nhất rời khỏi điện thoại là **vị trí**, và chỉ ở bản Ultimate khi bạn bật bản đồ trực tiếp: toạ độ được gửi tới các dịch vụ bản đồ mã nguồn mở để nhận về ô bản đồ, tuyến đường và tên địa điểm. Xem mục 2b.
+Thứ duy nhất rời khỏi điện thoại là **vị trí**, và chỉ ở bản Ultimate khi bạn bật bản đồ trực tiếp: toạ độ được gửi tới các nhà cung cấp dịch vụ bản đồ để nhận về ô bản đồ, tuyến đường và tên địa điểm. Xem mục 2b.
 
 Nếu bạn chỉ có thời gian đọc 1 dòng:
 - ❌ Không có tài khoản, không cần đăng nhập.
@@ -31,7 +30,7 @@ Nếu bạn chỉ có thời gian đọc 1 dòng:
 - ❌ Nội dung thông báo (chữ, địa điểm, ETA, tên đường) **không bao giờ** được upload, không lưu lên server, không chia sẻ với bên thứ ba.
 - ❌ Không truy cập danh bạ, micro, camera, SMS hay bộ nhớ.
 - ⚠️ **Vị trí** — chỉ bản Ultimate, và chỉ khi bạn bật bản đồ trực tiếp. Xem mục 2b.
-- ✅ Đọc thông báo của Google Maps (chỉ Google Maps) trên máy bạn, dịch sang biểu tượng cho đồng hồ, rồi chuyển sang đồng hồ đã ghép nối — hiện qua Huawei Health hoặc Huawei Wear Engine.
+- ✅ Đọc thông báo của Google Maps (chỉ Google Maps) trên máy bạn, dịch sang biểu tượng cho đồng hồ, rồi chuyển sang đồng hồ đã ghép nối.
 - 💳 NaviCast miễn phí dùng thử. Sau thời gian dùng thử, **một lần mua trong ứng dụng** sẽ mở khoá vĩnh viễn. Giao dịch do **Google Play Billing** xử lý hoàn toàn — NaviCast không bao giờ thấy, không xử lý và không lưu thông tin thẻ của bạn, và không gắn giao dịch với bất kỳ tài khoản nào của chúng tôi (chúng tôi không có tài khoản nào).
 
 ---
@@ -43,19 +42,19 @@ Nếu bạn chỉ có thời gian đọc 1 dòng:
 | Loại dữ liệu | Có thu thập? | Ghi chú |
 |---|---|---|
 | Định danh cá nhân (tên, email, số điện thoại, ID tài khoản) | ❌ Không | App không có hệ thống tài khoản |
-| Vị trí | ⚠️ Có — chỉ bản Ultimate | Dùng cho bản đồ trực tiếp và dẫn đường độc lập; toạ độ được gửi tới các dịch vụ bản đồ mã nguồn mở. Xem mục 2b |
+| Vị trí | ⚠️ Có — chỉ bản Ultimate | Dùng cho bản đồ trực tiếp và dẫn đường độc lập; toạ độ được gửi tới các nhà cung cấp dịch vụ bản đồ. Xem mục 2b |
 | Danh bạ, SMS, lịch sử cuộc gọi | ❌ Không | Các quyền này **không** được xin |
-| Nội dung thông báo (text maneuver Google Maps, địa danh) | ⚠️ Đọc tại chỗ | Chỉ dùng để render biểu tượng + nhãn khoảng cách trên 1 thông báo cục bộ. **Không** lưu, không log, không truyền. |
+| Nội dung thông báo (chữ hướng rẽ của Google Maps, địa danh) | ⚠️ Đọc tại chỗ | Chỉ dùng để vẽ biểu tượng + nhãn khoảng cách trên 1 thông báo cục bộ. **Không** lưu, không ghi nhật ký, không truyền. |
 | Định danh thiết bị (IMEI, advertising ID) | ❌ Không | App **không** đọc device IDs |
-| Báo cáo crash, analytics, diagnostics | ❌ Không | NaviCast không dùng Firebase, Crashlytics, Sentry hay bất kỳ analytics SDK nào |
+| Báo cáo lỗi, phân tích, chẩn đoán | ❌ Không | NaviCast không có công cụ báo lỗi hay phân tích nào |
 | File, ảnh, media | ❌ Không | App **không** xin quyền bộ nhớ |
 | Thông tin thanh toán / thẻ | ❌ Không | Giao dịch mua một lần do **Google Play Billing** xử lý. NaviCast không bao giờ nhận số thẻ, địa chỉ thanh toán hay bất kỳ dữ liệu phương tiện thanh toán nào. |
 | Trạng thái mua hàng | ⚠️ Chỉ trên máy | Sau khi mua, NaviCast lưu một cờ "đã mở khoá" cục bộ và hỏi Google Play để xác nhận quyền. Cờ này không phải dữ liệu cá nhân và không được gửi cho chúng tôi (chúng tôi không có server). |
 
-**Cài đặt app** (preset đồng hồ, đơn vị khoảng cách, ngôn ngữ, theme, vibration toggle, cờ đã hoàn thành onboarding) lưu cục bộ trên máy qua Android Jetpack DataStore trong vùng riêng tư của app. Các cài đặt này:
+**Cài đặt app** (mẫu đồng hồ, đơn vị khoảng cách, ngôn ngữ, giao diện, bật tắt rung, cờ đã xem hướng dẫn) lưu cục bộ trong vùng riêng tư của app trên máy bạn. Các cài đặt này:
 - Không bao giờ rời thiết bị.
 - Tự xoá khi gỡ app.
-- Không chứa dữ liệu cá nhân — chỉ là tuỳ chọn UI.
+- Không chứa dữ liệu cá nhân — chỉ là tuỳ chọn giao diện.
 
 ---
 
@@ -63,8 +62,7 @@ Nếu bạn chỉ có thời gian đọc 1 dòng:
 ## 2b. Vị trí — chỉ bản Ultimate
 
 Bản **Ultimate** có bản đồ trực tiếp và chế độ dẫn đường độc lập. NaviCast **chỉ** xin quyền vị trí
-chính xác (`ACCESS_FINE_LOCATION`) **khi bạn bật tính năng đó**. Bản **Standard** và **Pro** không
-bao giờ xin quyền vị trí.
+chính xác **khi bạn bật tính năng đó**. Bản **Standard** và **Pro** không bao giờ xin quyền vị trí.
 
 Vị trí được dùng để:
 - căn bản đồ vào vị trí hiện tại và vẽ ảnh bản đồ gửi sang đồng hồ;
@@ -83,10 +81,10 @@ trên, và chỉ trong lúc bạn đang dẫn đường:
 Các yêu cầu này không kèm tên, tài khoản hay mã định danh nào do NaviCast tạo ra. Như mọi dịch vụ Internet, các nhà cung cấp này nhìn thấy địa chỉ IP của bạn.
 
 NaviCast **không có máy chủ riêng**, **không lưu lịch sử vị trí** của bạn ở đâu ngoài chính máy bạn,
-và **không dùng vị trí cho quảng cáo, phân tích hay lập hồ sơ người dùng**. NaviCast **không** xin
-quyền vị trí nền (`ACCESS_BACKGROUND_LOCATION`).
+và **không dùng vị trí cho quảng cáo, phân tích hay lập hồ sơ người dùng**. Trên Android, NaviCast **không** xin
+quyền vị trí nền.
 
-Dịch vụ tiền cảnh loại `location` chỉ chạy khi bạn bấm **Bắt đầu** và dừng ngay khi bạn bấm
+Việc lấy vị trí chỉ chạy khi bạn bấm **Bắt đầu** và dừng ngay khi bạn bấm
 **Dừng**. Tắt bản đồ, hoặc thu hồi quyền vị trí trong Cài đặt Android, là dừng hoàn toàn việc này.
 
 
@@ -105,7 +103,7 @@ mọi nội dung về đọc thông báo Google Maps trong chính sách này ch�
   thường (khoảng cách và tên đường), iOS tự chuyển sang đồng hồ đã ghép đôi. Không gửi lên máy chủ nào, và
   bạn tắt được trong Cài đặt.
 - **Địa chỉ đã lưu** nằm trên iPhone của bạn và bị xoá khi gỡ ứng dụng.
-- Việc mua (dùng thử và bản đầy đủ) do Apple xử lý hoàn toàn. NaviCast không bao giờ thấy thông tin thanh toán của bạn.
+- Việc mua (dùng thử và NaviCast Ultimate) do Apple xử lý hoàn toàn. NaviCast không bao giờ thấy thông tin thanh toán của bạn.
 - Không có tài khoản, không quảng cáo, không phân tích, không theo dõi.
 
 ---
@@ -117,16 +115,16 @@ NaviCast chỉ xin **đúng tối thiểu** quyền cần để hoạt động:
 
 | Quyền | Lý do |
 |---|---|
-| `BIND_NOTIFICATIONS_LISTENER_SERVICE` | Để đọc thông báo dẫn đường của Google Maps. Đây là cách **duy nhất** biết khi nào sắp có khúc rẽ. Hệ thống Android quản lý quyền này qua toggle "Notification access" — bạn chủ động bật/tắt khi nào. |
-| `POST_NOTIFICATIONS` (Android 13+) | Để tạo 1 thông báo cục bộ chứa biểu tượng maneuver; ứng dụng đồng hành của đồng hồ (hiện là Huawei Health) sẽ forward lên đồng hồ. |
-| `FOREGROUND_SERVICE` + `FOREGROUND_SERVICE_SPECIAL_USE` | Giữ trình đọc thông báo sống khi đang dẫn đường (Android sẽ kill listener sau vài phút trên 1 số máy). |
-| `com.android.vending.BILLING` | Để cung cấp giao dịch mua một lần trong ứng dụng mở khoá sau thời gian dùng thử, qua Google Play Billing. NaviCast không xử lý dữ liệu thanh toán nào. |
+| Truy cập thông báo | Để đọc thông báo dẫn đường của Google Maps. Bạn chủ động bật tắt bằng công tắc "Truy cập thông báo" trong Cài đặt. |
+| Đăng thông báo (Android 13+) | Để tạo 1 thông báo cục bộ chứa biểu tượng hướng rẽ; ứng dụng đồng hành của đồng hồ sẽ chuyển lên đồng hồ. |
+| Chạy liên tục khi dẫn đường | Để Android không dừng NaviCast giữa chuyến. |
+| Mua trong ứng dụng | Để cung cấp giao dịch mua một lần mở khoá sau thời gian dùng thử. NaviCast không xử lý dữ liệu thanh toán nào. |
 
-App **KHÔNG** xin: danh bạ, SMS, micro, camera, bộ nhớ, Bluetooth, trạng thái điện thoại, "query all packages", hay **vị trí nền**.
+App **KHÔNG** xin: danh bạ, SMS, micro, camera, bộ nhớ, Bluetooth, trạng thái điện thoại, hay **vị trí nền**.
 
 App **CÓ** xin **vị trí chính xác** — chỉ bản Ultimate, và chỉ khi bạn bật bản đồ trực tiếp. Xem mục 2b.
 
-Bạn có thể tắt `BIND_NOTIFICATION_LISTENER_SERVICE` bất cứ lúc nào:
+Bạn có thể tắt quyền truy cập thông báo bất cứ lúc nào:
 **Cài đặt → Ứng dụng → Quyền đặc biệt → Quyền truy cập thông báo → tắt NaviCast.**
 
 Khi tắt, NaviCast không thể đọc bất kỳ thông báo nào, kể cả Google Maps. Việc chuyển tiếp dừng ngay lập tức.
@@ -135,36 +133,23 @@ Khi tắt, NaviCast không thể đọc bất kỳ thông báo nào, kể cả G
 
 ## 4. Dịch vụ bên thứ ba
 
-NaviCast dùng Google Play Billing để xử lý giao dịch, và — chỉ ở bản Ultimate — các dịch vụ bản đồ mã nguồn mở cho tính năng bản đồ trực tiếp. Cụ thể:
-- ❌ Không Firebase, Google Analytics, hay SDK Google Play Services nào ngoài system service mặc định và billing.
-- ❌ Không Crashlytics, Sentry, Bugsnag hay crash reporter khác.
-- ❌ Không SDK quảng cáo.
+NaviCast dùng dịch vụ thanh toán của cửa hàng ứng dụng để xử lý giao dịch, và các nhà cung cấp dịch vụ bản đồ cho bản đồ trực tiếp. Cụ thể:
+- ❌ Không có công cụ phân tích.
+- ❌ Không có công cụ báo lỗi.
+- ❌ Không có quảng cáo.
 - ❌ Không đăng nhập mạng xã hội.
 - ✅ **Google Play Billing** — chỉ dùng để xử lý giao dịch mua một lần mở khoá ứng dụng sau thời gian dùng thử.
 - ✅ **Huawei IAP** — vai trò như Google Play Billing, cho bản cài từ AppGallery.
 - ✅ **Apple In-App Purchase** — vai trò giống Google Play Billing, cho bản iPhone.
 - ✅ **Nhà cung cấp dịch vụ bản đồ** — bản Ultimate trên Android và bản iPhone, dùng cho ô bản đồ, định tuyến và tìm địa điểm. Các dịch vụ này nhận toạ độ của bạn như nêu ở mục 2b.
 
-**Google Play Billing.** Khi bạn chọn mua, NaviCast chuyển bạn sang ứng dụng Google Play Store; Play Store thu thập và xử lý thanh toán hoàn toàn ở phía họ. NaviCast chỉ nhận lại một purchase token / trạng thái quyền xác nhận đã mở khoá — không bao giờ nhận số thẻ, địa chỉ thanh toán hay phương tiện thanh toán. Việc Google xử lý dữ liệu thanh toán đó tuân theo **Chính sách Bảo mật của Google** (https://policies.google.com/privacy), không phải của chúng tôi.
+**Google Play Billing.** Khi bạn chọn mua, NaviCast chuyển bạn sang ứng dụng Google Play Store; Play Store thu thập và xử lý thanh toán hoàn toàn ở phía họ. NaviCast chỉ biết việc mở khoá có thành công hay không — không bao giờ nhận số thẻ, địa chỉ thanh toán hay phương tiện thanh toán. Việc Google xử lý dữ liệu thanh toán đó tuân theo **Chính sách Bảo mật của Google** (https://policies.google.com/privacy), không phải của chúng tôi.
 
-NaviCast tương tác với **Huawei Health** chỉ gián tiếp: post 1 Android notification thông thường; Huawei Health (bạn cài + cấu hình riêng) đọc nó như đọc bất kỳ notification nào khác. App không dùng API của Huawei Health trực tiếp.
+Với đồng hồ Huawei, chỉ đường tới đồng hồ bằng thông báo thường do **Huawei Health** chuyển tiếp, hoặc qua app NaviCast trên đồng hồ theo kết nối do Huawei Health quản lý.
 
-Ngoài đồng hồ Huawei, NaviCast còn hỗ trợ **đồng hồ Amazfit chạy Zepp OS**. Phần trên đồng hồ là một mini program Zepp OS, cũng tên NaviCast, phát hành qua Zepp Store.
-**Zepp OS không cho ứng dụng Android đẩy dữ liệu sang đồng hồ**, nên với Amazfit thì đồng hồ là bên chủ động vào lấy:
+Ngoài đồng hồ Huawei, NaviCast còn hỗ trợ **đồng hồ Amazfit chạy Zepp OS**, qua một mini program NaviCast phát hành trên Zepp Store. Chỉ đường đi từ ứng dụng NaviCast sang ứng dụng Zepp trên cùng chiếc điện thoại, được bảo vệ bằng mã ghép nối bạn nhập một lần, rồi ứng dụng Zepp gửi sang đồng hồ qua Bluetooth. **Không có dữ liệu dẫn đường nào được gửi tới máy chủ nào của chúng tôi — chúng tôi không vận hành máy chủ nào — và NaviCast không dùng dịch vụ đám mây nào của Zepp.** Dữ liệu chuyển đi gồm hướng rẽ hiện tại, khoảng cách tới khúc rẽ, tên đường, thời gian tới đích và, ở bản Ultimate nếu bạn đã bật bản đồ, ảnh bản đồ hoặc đường tuyến.
 
-1. Ứng dụng NaviCast trên điện thoại mở một cổng chỉ nghe ở `127.0.0.1`. `127.0.0.1` là địa chỉ loopback — nghĩa là *chính cái điện thoại này*. Cổng đó không thể truy cập từ Wi-Fi của bạn, từ Internet, hay từ bất kỳ thiết bị nào khác.
-2. Side Service của NaviCast — một đoạn JavaScript chạy **bên trong ứng dụng Zepp, trên cùng chiếc điện thoại đó** — đọc chỉ đường hiện tại qua cổng loopback này bằng HTTP thường. Mỗi lần đọc đều phải kèm **mã ghép nối 6 ký tự** mà bạn nhập một lần trong ứng dụng Zepp (Zepp → cài đặt
-   NaviCast); không đúng mã thì bị từ chối.
-3. Ứng dụng Zepp chuyển kết quả sang đồng hồ qua kết nối **Bluetooth** của chính nó. Mini program hỏi khoảng mỗi giây một lần, và chỉ khi bạn đang mở nó trên đồng hồ. Vì vậy chặng duy nhất rời khỏi điện thoại là chặng Bluetooth mà ứng dụng Zepp vốn đã lo.
-**Không có dữ liệu dẫn đường nào được gửi tới máy chủ nào của chúng tôi — chúng tôi không vận hành máy chủ nào — và NaviCast không dùng dịch vụ đám mây nào của Zepp.** Cổng loopback chỉ mở trong lúc NaviCast đang chuyển tiếp, và chỉ chứa hướng rẽ hiện tại, khoảng cách tới khúc rẽ, tên đường, thời
-gian tới đích, và — ở bản Ultimate nếu bạn đã bật bản đồ — ảnh bản đồ hoặc đường tuyến mà điện thoại đã vẽ xong.
-**Mini program trên đồng hồ khai đúng hai quyền, không có gì thêm:**
-| Quyền | Dùng để làm gì |
-|---|---|
-| `data:os.device.info` | Đọc kích thước và hình dạng màn hình để vẽ bố cục đúng cho từng đời đồng hồ — Zepp OS có cả màn tròn lẫn màn vuông, tám lớp độ phân giải. |
-| `device:os.local_storage` | Giữ lựa chọn hiển thị trên đồng hồ giữa các lần mở (ngôn ngữ, chế độ tiết kiệm pin, loại phương tiện) và ghi nhận bạn đã đồng ý thông báo quyền riêng tư để lần sau không hỏi lại. |
-Mini program **không xin và không thể đọc** vị trí, nhịp tim hay bất kỳ cảm biến sức khoẻ nào; không có đường ra mạng riêng; và không lưu gì ngoài các lựa chọn nêu trên. Nơi nào có dùng vị trí thì đó là **ứng dụng trên điện thoại** đọc, xem mục 2b.
-Mã ghép nối bạn nhập được **ứng dụng Zepp** giữ trong phần cài đặt của chính nó, trên điện thoại của bạn. Gỡ mini program, hoặc gỡ ứng dụng trên điện thoại, là xoá hết những gì NaviCast đã lưu.
+Mini program chỉ đọc kích thước và hình dạng màn hình đồng hồ, và giữ lựa chọn hiển thị trên đồng hồ (ngôn ngữ, tiết kiệm pin, loại phương tiện, việc bạn đã đồng ý thông báo quyền riêng tư). Nó **không xin và không thể đọc** vị trí, nhịp tim hay bất kỳ cảm biến sức khoẻ nào, và không có đường ra mạng riêng. Gỡ mini program hoặc ứng dụng trên điện thoại là xoá hết những gì NaviCast đã lưu.
 
 ---
 
@@ -178,7 +163,7 @@ Cụ thể:
 - Không chia sẻ với analytics provider.
 - Không chia sẻ với cơ quan thực thi pháp luật (chúng tôi không có dữ liệu để cung cấp).
 
-Ngoại lệ thứ nhất là **vị trí ở bản Ultimate**: trong lúc bạn dẫn đường, toạ độ được gửi tới các dịch vụ bản đồ mã nguồn mở liệt kê ở mục 2b để nhận về ô bản đồ, tuyến đường và tên địa điểm. Các dịch vụ này do bên thứ ba vận hành theo chính sách riêng của họ. Chúng tôi chỉ gửi đúng toạ độ và từ khoá cần cho yêu cầu đó — không kèm mã định danh, tài khoản, hay nội dung thông báo.
+Ngoại lệ thứ nhất là **vị trí ở bản Ultimate**: trong lúc bạn dẫn đường, toạ độ được gửi tới các nhà cung cấp dịch vụ bản đồ nêu ở mục 2b để nhận về ô bản đồ, tuyến đường và tên địa điểm. Các dịch vụ này do bên thứ ba vận hành theo chính sách riêng của họ. Chúng tôi chỉ gửi đúng toạ độ và từ khoá cần cho yêu cầu đó — không kèm mã định danh, tài khoản, hay nội dung thông báo.
 
 Ngoại lệ thứ hai là **xử lý thanh toán**: nếu bạn mua hàng, giao dịch diễn ra trực tiếp giữa bạn và **Google Play**, theo chính sách bảo mật riêng của Google. NaviCast không nhận và không chuyển tiếp dữ liệu thanh toán đó — chúng tôi chỉ biết việc mở khoá có thành công hay không.
 
@@ -207,9 +192,7 @@ Nếu bạn ở EU/UK (GDPR/UK DPA), EEA, California (CCPA) hoặc các khu vự
 NaviCast tuân thủ best practice bảo mật:
 - Mọi xử lý **chỉ trên thiết bị**. Không có server.
 - Nội dung thông báo giữ trong RAM tạm thời cho 1 phiên dẫn đường, sau đó giải phóng.
-- Nội dung thông báo **không bao giờ** log trong release build (verified qua audit source code + ProGuard rules).
-- APK release được ký qua quy trình CI tự động; khoá ký không bao giờ rời môi trường bảo mật của nhà phát triển.
-- Mã nguồn đóng và được rà soát trước mỗi bản phát hành.
+- Nội dung thông báo **không bao giờ** được ghi nhật ký trong bản phát hành.
 
 ---
 
@@ -217,7 +200,7 @@ NaviCast tuân thủ best practice bảo mật:
 
 Nếu chính sách thay đổi:
 1. Cập nhật ngày "Cập nhật lần cuối" ở đầu file.
-2. Ghi chú trong release notes Play Store.
+2. Ghi chú trong phần giới thiệu bản cập nhật.
 3. Nếu thay đổi mang tính trọng yếu (vd nếu chúng tôi bao giờ bắt đầu thu thập dữ liệu — chưa có kế hoạch nào như vậy), chúng tôi sẽ yêu cầu user đồng ý explicit trước khi thay đổi có hiệu lực.
 
 Bạn có thể xem phiên bản hiện tại tại: `https://gioiktvt.github.io/navicast-legal/privacy-policy-vi.html` (Tiếng Việt) hoặc `https://gioiktvt.github.io/navicast-legal/privacy-policy.html` (English).
@@ -239,7 +222,7 @@ Vui lòng dùng tiếng Việt hoặc tiếng Anh.
 "Google Maps" và logo Google Maps là nhãn hiệu của Google LLC.
 "Huawei", "Huawei Health", "Huawei Watch", "Huawei Band", "Huawei Watch GT", "Huawei Watch Fit" là nhãn hiệu của Huawei Technologies Co., Ltd.
 
-NaviCast là **ứng dụng độc lập của bên thứ ba**. NaviCast **không liên kết, không được tài trợ, không được chứng thực** bởi Google hay Huawei. NaviCast không sử dụng API của các công ty này (ngoài việc đọc Android notification công khai — bất kỳ app cài đặt bởi user nào với quyền notification access đều có thể làm).
+NaviCast là **ứng dụng độc lập của bên thứ ba**. NaviCast **không liên kết, không được tài trợ, không được chứng thực** bởi Google hay Huawei.
 
 ---
 

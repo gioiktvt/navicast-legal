@@ -8,7 +8,6 @@ lang: en
 # Privacy Policy — NaviCast
 
 **App name**: NaviCast
-**Application ID**: `com.gioitv.navicast`
 **Developer**: Tri Tue Viet (Tran Van Gioi) (gioitv86@gmail.com)
 **Effective date**: 2026-05-08
 **Last updated**: 2026-11-04
@@ -19,19 +18,19 @@ lang: en
 
 **Using an iPhone? Section 2c applies to you.** The rest of this summary describes the Android app.
 
-NaviCast is an Android companion app that forwards turn-by-turn navigation icons from your phone to your paired smartwatch. Watch support currently covers Huawei devices, over Huawei Health and Huawei Wear Engine.
+NaviCast is an Android companion app that forwards turn-by-turn navigation icons from your phone to your paired smartwatch. It supports Huawei and Amazfit watches.
 
 **Notification content — the turn text, addresses, ETA and place names NaviCast reads — is never collected, stored, or transmitted off your device, on any tier.** It is processed locally and discarded.
 
-The one thing that does leave your phone is **location**, and only on the Ultimate tier once you enable the live map: coordinates go to open-source mapping services so they can return map tiles, a route and place names. See section 2b.
+The one thing that does leave your phone is **location**, and only on the Ultimate tier once you enable the live map: coordinates go to map service providers so they can return map tiles, a route and place names. See section 2b.
 
 If you read nothing else, read this:
 - ❌ No user accounts, no login.
-- ❌ No analytics, no tracking, no advertising SDKs.
+- ❌ No analytics, no tracking, no advertising.
 - ❌ No notification content (text, addresses, ETA, place names) is ever uploaded, stored on a server, or shared with third parties.
 - ❌ No contacts, microphone, camera, SMS, or storage access.
 - ⚠️ **Location** — Ultimate tier only, and only once you enable the live map. See section 2b.
-- ✅ Reads Google Maps notifications (only) on your device, converts them to a watch-friendly notification, and hands it to the paired watch — today through Huawei Health or Huawei Wear Engine.
+- ✅ Reads Google Maps notifications (only) on your device, converts them to a watch-friendly notification, and hands it to the paired watch.
 - 💳 NaviCast is free to try. After a free trial period, a **one-time in-app purchase** unlocks the app permanently. The purchase is processed entirely by **Google Play Billing** — NaviCast never sees, handles, or stores your payment-card details, and no purchase is tied to any account we hold (we hold none).
 
 ---
@@ -43,16 +42,16 @@ If you read nothing else, read this:
 | Data type | Collected? | Notes |
 |---|---|---|
 | Personal identifiers (name, email, phone, account ID) | ❌ No | App has no account system |
-| Location | ⚠️ Yes — Ultimate tier only | Powers the live map and standalone navigation; coordinates are sent to open-source mapping services. See section 2b |
+| Location | ⚠️ Yes — Ultimate tier only | Powers the live map and standalone navigation; coordinates are sent to map service providers. See section 2b |
 | Contacts, SMS, call logs | ❌ No | These permissions are **not requested** |
 | Notification content (Google Maps maneuver text, addresses) | ⚠️ Read only on-device | Used only to render an icon + distance label on a local notification. Never persisted, logged, or transmitted. |
 | Device identifiers (IMEI, advertising ID) | ❌ No | App does **not** read device IDs |
-| Crash reports, analytics, diagnostics | ❌ No | NaviCast ships without Firebase, Crashlytics, Sentry, or any analytics SDK |
+| Crash reports, analytics, diagnostics | ❌ No | NaviCast includes no crash-reporting or analytics tool |
 | Files, photos, media | ❌ No | Storage permission is **not requested** |
 | Payment / card details | ❌ No | One-time purchases are processed by **Google Play Billing**. NaviCast never receives your card number, billing address, or any payment instrument data. |
 | Purchase status | ⚠️ On-device only | After you buy, NaviCast stores a local "unlocked" flag and queries Google Play to confirm your entitlement. This flag is not personal data and is not transmitted to us (we run no server). |
 
-**App settings** (watch model preset, distance unit, language, theme, vibration toggle, onboarding completion flag) are stored locally on your device using Android Jetpack DataStore in the app's private storage area. These settings:
+**App settings** (watch model preset, distance unit, language, theme, vibration toggle, onboarding completion flag) are stored locally in the app's private storage on your device. These settings:
 - Never leave your device.
 - Are wiped on app uninstall.
 - Contain no personal data — only your UI preferences.
@@ -63,8 +62,7 @@ If you read nothing else, read this:
 ## 2b. Location — Ultimate tier only
 
 The **Ultimate** tier adds a live map and a standalone navigation mode. NaviCast requests precise
-location (`ACCESS_FINE_LOCATION`) **only when you turn that feature on**. The **Standard** and
-**Pro** tiers never request location.
+location **only when you turn that feature on**. The **Standard** and **Pro** tiers never request location.
 
 Location is used to:
 - centre the map on where you are, and render the map image sent to your watch;
@@ -83,10 +81,10 @@ you are actively navigating:
 These requests do not carry your name, an account or any identifier created by NaviCast. Like any internet service, these providers can see your IP address.
 
 NaviCast has **no server of its own**, keeps **no location history** anywhere but on your device,
-and **never uses location for advertising, analytics, or profiling**. NaviCast does **not** request
-background location (`ACCESS_BACKGROUND_LOCATION`).
+and **never uses location for advertising, analytics, or profiling**. On Android, NaviCast does **not** request
+background location access.
 
-The `location` foreground service runs only after you press **Start** and stops the moment you
+Location runs only after you press **Start** and stops the moment you
 press **Stop**. Turning the map off, or revoking the location permission in Android Settings, ends
 this completely.
 
@@ -108,7 +106,7 @@ Android only. On iPhone:
   local notification (distance and street name), which iOS passes to your paired watch. It is never
   sent to any server, and you can turn it off in Settings.
 - **Saved places** stay on your iPhone and are removed when you delete the app.
-- Purchases (the free trial and the full version) are handled entirely by Apple. NaviCast never sees your payment details.
+- Purchases (the free trial and NaviCast Ultimate) are handled entirely by Apple. NaviCast never sees your payment details.
 - There is no account, no advertising, no analytics and no tracking.
 
 ---
@@ -120,16 +118,16 @@ NaviCast requests **only** the minimum permissions needed to do its job:
 
 | Permission | Why we need it |
 |---|---|
-| `BIND_NOTIFICATION_LISTENER_SERVICE` | To read Google Maps' navigation notification on your phone. This is the **only** way to know when a maneuver is coming. The system enforces this via the "Notification access" toggle in Settings — you control when NaviCast can read notifications. |
-| `POST_NOTIFICATIONS` (Android 13+) | To create a local notification with the maneuver icon, which the watch companion app (Huawei Health today) forwards to your watch. |
-| `FOREGROUND_SERVICE` + `FOREGROUND_SERVICE_SPECIAL_USE` | To keep our notification listener alive during navigation (Android otherwise kills it after a few minutes on some devices). |
-| `com.android.vending.BILLING` | To offer the one-time in-app purchase that unlocks the app after the free trial, via Google Play Billing. No payment data is handled by NaviCast. |
+| Notification access | To read Google Maps' navigation notification on your phone. You control this with the "Notification access" switch in Settings. |
+| Post notifications (Android 13+) | To create a local notification with the turn icon, which your watch's companion app forwards to your watch. |
+| Keep running during navigation | So Android does not stop NaviCast partway through a trip. |
+| In-app purchase | To offer the one-time purchase that unlocks the app after the free trial. No payment data is handled by NaviCast. |
 
-We do **not** request: contacts, SMS, microphone, camera, storage, Bluetooth, phone state, "query all packages", or **background location**.
+We do **not** request: contacts, SMS, microphone, camera, storage, Bluetooth, phone state, or **background location**.
 
 We **do** request **precise location** — Ultimate tier only, and only once you enable the live map. See section 2b.
 
-You can revoke `BIND_NOTIFICATION_LISTENER_SERVICE` at any time:
+You can revoke notification access at any time:
 **Settings → Apps → Special access → Notification access → toggle NaviCast off.**
 
 When this is off, NaviCast cannot read any notification, including Google Maps. The forwarding stops immediately.
@@ -138,36 +136,23 @@ When this is off, NaviCast cannot read any notification, including Google Maps. 
 
 ## 4. Third-party services
 
-NaviCast uses Google Play Billing for purchases, and — on the Ultimate tier only — open-source mapping services for the live map. Specifically:
-- ❌ No Firebase, Google Analytics, or any Google Play Services SDK beyond standard Android system services and billing.
-- ❌ No Crashlytics, Sentry, Bugsnag, or other crash reporters.
-- ❌ No advertising SDKs.
+NaviCast uses store billing for purchases, and map service providers for the live map. Specifically:
+- ❌ No analytics.
+- ❌ No crash-reporting tools.
+- ❌ No advertising.
 - ❌ No social login.
 - ✅ **Google Play Billing** — used solely to process the one-time in-app purchase that unlocks the app after the free trial.
 - ✅ **Huawei IAP** — the same role as Google Play Billing, for installs from AppGallery.
 - ✅ **Apple In-App Purchase** — the same role as Google Play Billing, for the iPhone app.
 - ✅ **Map service providers** — Ultimate tier on Android and the iPhone app, for map tiles, routing and place search. These receive your coordinates as described in section 2b.
 
-**Google Play Billing.** When you choose to buy, NaviCast hands you off to the Google Play Store app, which collects and processes your payment entirely on its side. NaviCast receives back only a purchase token / entitlement state confirming the unlock — never your card number, billing address, or any payment instrument. Google's handling of that payment data is governed by **Google's Privacy Policy** (https://policies.google.com/privacy), not by us.
+**Google Play Billing.** When you choose to buy, NaviCast hands you off to the Google Play Store app, which collects and processes your payment entirely on its side. NaviCast only learns whether the unlock succeeded — never your card number, billing address, or any payment instrument. Google's handling of that payment data is governed by **Google's Privacy Policy** (https://policies.google.com/privacy), not by us.
 
-NaviCast interacts with **Huawei Health** only indirectly: it posts a regular Android notification, and Huawei Health (which you install and configure separately) reads it the same way it reads any other notification. We don't use Huawei Health's APIs directly.
+On Huawei watches, directions reach the watch as an ordinary notification forwarded by **Huawei Health**, or through the NaviCast watch app over the connection Huawei Health manages.
 
-Besides Huawei watches, NaviCast supports **Amazfit watches running Zepp OS**. The watch side is a small Zepp OS mini program, also called NaviCast, distributed through the Zepp Store.
-**Zepp OS does not let an Android app push data to the watch**, so on Amazfit the watch is the side that asks:
-1. The NaviCast Android app opens a listener bound to `127.0.0.1` on your phone. `127.0.0.1` is loopback — it means *this same phone*. That listener is not reachable from your Wi-Fi, from the Internet, or from any other device.
-2. The NaviCast Side Service — a piece of JavaScript that runs **inside the Zepp app, on that same phone** — reads the current direction from that loopback listener over plain HTTP. Every request must carry the **6-character pairing code** you type once in the Zepp app (Zepp → NaviCast settings); a request without the right code is refused.
-3. The Zepp app hands the result to the watch over its own **Bluetooth** link. The mini program asks for an update roughly once a second, and only while you have it open on the watch. So the only hop that leaves your phone is the Bluetooth link the Zepp app manages anyway.
-**No navigation data is sent to any server of ours — we do not operate one — and NaviCast uses no Zepp cloud service.** The loopback listener is open only while NaviCast is forwarding, and carries only the current turn, the distance to it, the street name, the arrival time, and — on the Ultimate tier, if you enabled the map — the map image or route line the phone has already drawn.
+Besides Huawei watches, NaviCast supports **Amazfit watches running Zepp OS**, through a small NaviCast mini program from the Zepp Store. Directions pass from the NaviCast app to the Zepp app on the same phone, protected by a pairing code you enter once, and the Zepp app sends them to your watch over Bluetooth. **No navigation data is sent to any server of ours — we do not operate one — and NaviCast uses no Zepp cloud service.** What is passed is the current turn, the distance to it, the street name, the arrival time and, on the Ultimate tier if you enabled the map, the map image or route line.
 
-**The watch mini program declares exactly two permissions, and nothing else:**
-
-| Permission | Why we need it |
-|---|---|
-| `data:os.device.info` | Read the screen size and shape so the layout is right on each watch model — Zepp OS spans round and square screens in eight resolutions. |
-| `device:os.local_storage` | Keep your display choices on the watch between sessions (language, battery saver, vehicle type) and remember that you accepted the privacy notice, so it is not shown again. |
-
-The mini program **does not request and cannot read** location, heart rate, or any other health sensor; it has no network access of its own; and it stores nothing beyond the preferences above. Where location is used at all, it is read by the **phone** app only — see section 2b.
-The pairing code you type stays in the **Zepp app's** own settings, on your phone. Uninstalling the mini program, or the phone app, removes everything NaviCast kept.
+The mini program only reads the watch's screen size and shape, and keeps your display choices on the watch (language, battery saver, vehicle type, and that you accepted the privacy notice). It **does not request and cannot read** location, heart rate or any other health sensor, and it has no network access of its own. Uninstalling the mini program or the phone app removes everything NaviCast kept.
 
 ---
 
@@ -181,7 +166,7 @@ Specifically:
 - We do not share with analytics providers.
 - We do not share with law enforcement (we have no data to provide).
 
-The first exception is **location on the Ultimate tier**: while you navigate, your coordinates go to the open-source mapping services listed in section 2b so they can return map tiles, a route, and place names. Those services are operated by third parties under their own privacy policies. We send them nothing but the coordinates and search terms needed for the request — no identifier, no account, no notification content.
+The first exception is **location on the Ultimate tier**: while you navigate, your coordinates go to the map service providers described in section 2b so they can return map tiles, a route, and place names. Those services are operated by third parties under their own privacy policies. We send them nothing but the coordinates and search terms needed for the request — no identifier, no account, no notification content.
 
 The second exception is **payment processing**: if you make a purchase, your payment is handled directly between you and **Google Play**, under Google's own privacy policy. NaviCast neither receives nor forwards that payment data — we only learn whether the unlock succeeded.
 
@@ -210,9 +195,7 @@ If you live in the EU/UK (GDPR/UK DPA), the EEA, California (CCPA), or similar j
 NaviCast follows defensive security practices:
 - All processing is **on-device only**. There is no server.
 - Notification content is held in volatile memory (RAM) for the duration of one navigation session, then released.
-- No notification content is logged in release builds (verified by source code audit + ProGuard rules).
-- The signed release APK is built via an automated CI pipeline; the signing key never leaves the developer's secured environment.
-- Source code is closed-source and reviewed before each release.
+- No notification content is logged in release builds.
 
 ---
 
@@ -220,7 +203,7 @@ NaviCast follows defensive security practices:
 
 If we ever change this policy, we will:
 1. Update the "Last updated" date at the top.
-2. Note the change in app's release notes (Play Store).
+2. Note the change in the app's release notes.
 3. If the change is material (e.g., we ever started collecting any data — which we have no plans to do), we will require explicit user consent before the change takes effect.
 
 You can check the current version at: `https://gioiktvt.github.io/navicast-legal/privacy-policy.html` (English) or `https://gioiktvt.github.io/navicast-legal/privacy-policy-vi.html` (Vietnamese).
@@ -242,7 +225,7 @@ Please use English or Vietnamese.
 "Google Maps" and the Google Maps logo are trademarks of Google LLC.
 "Huawei", "Huawei Health", "Huawei Watch", "Huawei Band", "Huawei Watch GT", "Huawei Watch Fit" are trademarks of Huawei Technologies Co., Ltd.
 
-NaviCast is an **independent third-party companion app**. It is **not affiliated with, endorsed by, or sponsored by** Google or Huawei. NaviCast does not use these companies' APIs (other than reading public Android notifications, which any user-installed app with notification access can do).
+NaviCast is an **independent third-party companion app**. It is **not affiliated with, endorsed by, or sponsored by** Google or Huawei.
 
 ---
 

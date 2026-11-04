@@ -21,10 +21,8 @@ Support: gioitv86@gmail.com
 ## App information
 
 - **App name**: NaviCast
-- **Application ID**: `com.gioitv.navicast`
 - **Developer**: Tri Tue Viet (Tran Van Gioi) (gioitv86@gmail.com)
-- **Source repository**: <https://github.com/gioiktvt/navicast> (private)
 
 ---
 
-*This is a public documentation mirror. The NaviCast source code is proprietary and hosted in a private repository.*
+*NaviCast is proprietary software.*
