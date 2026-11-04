@@ -11,7 +11,7 @@ lang: zh-CN
 **应用 ID**：`com.gioitv.navicast`
 **开发者**：TRAN VAN GIOI（gioitv86@gmail.com）
 **生效日期**：2026-05-08
-**最后更新**：2026-11-03
+**最后更新**：2026-11-04
 
 ---
 
@@ -70,13 +70,15 @@ NaviCast 是一款 Android 配套应用，将逐步导航图标从您的手机�
 - 计算路线以及到下一个转弯处的距离；
 - 在您搜索或分享地址时，把坐标转换成地点名称。
 
-**您的坐标会发送到以下开源地图服务**，仅用于上述用途，且仅在您正在导航时：
+**您的坐标会发送给地图服务提供商**，仅用于上述用途，且仅在您正在导航时：
 
 | 服务 | 接收内容 | 用途 |
 |---|---|---|
-| `api.maptiler.com` 或 `tiles.openfreemap.org` | 您周围的地图范围 | 地图瓦片 |
-| `valhalla1.openstreetmap.de` | 起点和终点 | 路线计算 |
-| `photon.komoot.io` | 坐标或搜索关键词 | 地点搜索与逆地理编码 |
+| 地图数据 | 您周围的地图范围 | 地图瓦片 |
+| 路线计算 | 起点和终点 | 路线计算 |
+| 地点搜索 | 坐标或搜索关键词 | 地点搜索与逆地理编码 |
+
+这些请求不包含您的姓名、账户或 NaviCast 生成的任何标识符。与所有互联网服务一样，这些提供商可以看到您的 IP 地址。
 
 NaviCast **没有自己的服务器**，除您的设备外**不在任何地方保存位置历史**，也**从不将位置用于广告、
 分析或用户画像**。NaviCast **不**请求后台位置权限（`ACCESS_BACKGROUND_LOCATION`）。
@@ -132,7 +134,7 @@ NaviCast 使用 Google Play 结算处理购买，并且 — 仅在 Ultimate 版 
 - ❌ 没有社交登录。
 - ✅ **Google Play 结算** — 仅用于处理试用期后解锁应用的一次性内购。
 - ✅ **华为 IAP** — 与 Google Play 结算作用相同，适用于从 AppGallery 安装的版本。
-- ✅ **MapTiler / OpenFreeMap、Valhalla、Photon** — 仅限 Ultimate 版，用于地图瓦片、路线计算和地点搜索。导航期间这些服务会接收您的坐标。参见第 2b 节。
+- ✅ **地图服务提供商** — Android 的 Ultimate 版和 iPhone 版，用于地图瓦片、路线计算和地点搜索。这些服务会按第 2b 节所述接收您的坐标。
 
 **Google Play 结算。** 当您选择购买时，NaviCast 会将您转交给 Google Play 商店应用，由其完全在其一侧收集和处理您的付款。NaviCast 仅收到确认解锁的购买令牌 / 权益状态 — 绝不会收到您的卡号、账单地址或任何支付工具。Google 对该支付数据的处理受 **Google 隐私政策**（https://policies.google.com/privacy）约束，而非我们。
 

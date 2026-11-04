@@ -11,7 +11,7 @@ lang: en
 **Application ID**: `com.gioitv.navicast`
 **Developer**: TRAN VAN GIOI (gioitv86@gmail.com)
 **Effective date**: 2026-05-08
-**Last updated**: 2026-11-03
+**Last updated**: 2026-11-04
 
 ---
 
@@ -71,14 +71,16 @@ Location is used to:
 - compute the route and the distance to the next turn;
 - turn coordinates into place names when you search for or share an address.
 
-**Your coordinates are sent to the following open-source mapping services**, solely for those
-purposes, and only while you are actively navigating:
+**Your coordinates are sent to map service providers**, solely for those purposes, and only while
+you are actively navigating:
 
 | Service | Receives | Purpose |
 |---|---|---|
-| `api.maptiler.com` or `tiles.openfreemap.org` | the map area around you | map tiles |
-| `valhalla1.openstreetmap.de` | origin and destination | route calculation |
-| `photon.komoot.io` | coordinates or a search term | place search and reverse geocoding |
+| Map data | the map area around you | map tiles |
+| Routing | origin and destination | route calculation |
+| Place search | coordinates or a search term | place search and reverse geocoding |
+
+These requests do not carry your name, an account or any identifier created by NaviCast. Like any internet service, these providers can see your IP address.
 
 NaviCast has **no server of its own**, keeps **no location history** anywhere but on your device,
 and **never uses location for advertising, analytics, or profiling**. NaviCast does **not** request
@@ -144,7 +146,7 @@ NaviCast uses Google Play Billing for purchases, and — on the Ultimate tier on
 - ✅ **Google Play Billing** — used solely to process the one-time in-app purchase that unlocks the app after the free trial.
 - ✅ **Huawei IAP** — the same role as Google Play Billing, for installs from AppGallery.
 - ✅ **Apple In-App Purchase** — the same role as Google Play Billing, for the iPhone app.
-- ✅ **MapTiler / OpenFreeMap, Valhalla, Photon** — Ultimate tier only, for map tiles, routing and place search. These receive your coordinates while you navigate. See section 2b.
+- ✅ **Map service providers** — Ultimate tier on Android and the iPhone app, for map tiles, routing and place search. These receive your coordinates as described in section 2b.
 
 **Google Play Billing.** When you choose to buy, NaviCast hands you off to the Google Play Store app, which collects and processes your payment entirely on its side. NaviCast receives back only a purchase token / entitlement state confirming the unlock — never your card number, billing address, or any payment instrument. Google's handling of that payment data is governed by **Google's Privacy Policy** (https://policies.google.com/privacy), not by us.
 

@@ -11,7 +11,7 @@ lang: vi
 **Application ID**: `com.gioitv.navicast`
 **Nhà phát triển**: TRAN VAN GIOI (gioitv86@gmail.com)
 **Ngày hiệu lực**: 2026-05-08
-**Cập nhật lần cuối**: 2026-11-03
+**Cập nhật lần cuối**: 2026-11-04
 
 ---
 
@@ -71,14 +71,16 @@ Vị trí được dùng để:
 - tính tuyến đường và khoảng cách tới ngã rẽ kế tiếp;
 - đổi toạ độ thành tên địa điểm khi bạn tìm kiếm hoặc chia sẻ một địa chỉ.
 
-**Toạ độ của bạn được gửi tới các dịch vụ bản đồ mã nguồn mở sau**, chỉ để thực hiện đúng những việc
+**Toạ độ của bạn được gửi tới các nhà cung cấp dịch vụ bản đồ**, chỉ để thực hiện đúng những việc
 trên, và chỉ trong lúc bạn đang dẫn đường:
 
 | Dịch vụ | Nhận gì | Để làm gì |
 |---|---|---|
-| `api.maptiler.com` hoặc `tiles.openfreemap.org` | vùng bản đồ quanh bạn | tải ô bản đồ |
-| `valhalla1.openstreetmap.de` | điểm đi và điểm đến | tính tuyến đường |
-| `photon.komoot.io` | toạ độ hoặc từ khoá tìm kiếm | tìm và đổi toạ độ thành tên địa điểm |
+| Dữ liệu bản đồ | vùng bản đồ quanh bạn | tải ô bản đồ |
+| Định tuyến | điểm đi và điểm đến | tính tuyến đường |
+| Tìm địa điểm | toạ độ hoặc từ khoá tìm kiếm | tìm và đổi toạ độ thành tên địa điểm |
+
+Các yêu cầu này không kèm tên, tài khoản hay mã định danh nào do NaviCast tạo ra. Như mọi dịch vụ Internet, các nhà cung cấp này nhìn thấy địa chỉ IP của bạn.
 
 NaviCast **không có máy chủ riêng**, **không lưu lịch sử vị trí** của bạn ở đâu ngoài chính máy bạn,
 và **không dùng vị trí cho quảng cáo, phân tích hay lập hồ sơ người dùng**. NaviCast **không** xin
@@ -141,7 +143,7 @@ NaviCast dùng Google Play Billing để xử lý giao dịch, và — chỉ ở
 - ✅ **Google Play Billing** — chỉ dùng để xử lý giao dịch mua một lần mở khoá ứng dụng sau thời gian dùng thử.
 - ✅ **Huawei IAP** — vai trò như Google Play Billing, cho bản cài từ AppGallery.
 - ✅ **Apple In-App Purchase** — vai trò giống Google Play Billing, cho bản iPhone.
-- ✅ **MapTiler / OpenFreeMap, Valhalla, Photon** — chỉ bản Ultimate, dùng cho ô bản đồ, định tuyến và tìm địa điểm. Các dịch vụ này nhận toạ độ của bạn trong lúc dẫn đường. Xem mục 2b.
+- ✅ **Nhà cung cấp dịch vụ bản đồ** — bản Ultimate trên Android và bản iPhone, dùng cho ô bản đồ, định tuyến và tìm địa điểm. Các dịch vụ này nhận toạ độ của bạn như nêu ở mục 2b.
 
 **Google Play Billing.** Khi bạn chọn mua, NaviCast chuyển bạn sang ứng dụng Google Play Store; Play Store thu thập và xử lý thanh toán hoàn toàn ở phía họ. NaviCast chỉ nhận lại một purchase token / trạng thái quyền xác nhận đã mở khoá — không bao giờ nhận số thẻ, địa chỉ thanh toán hay phương tiện thanh toán. Việc Google xử lý dữ liệu thanh toán đó tuân theo **Chính sách Bảo mật của Google** (https://policies.google.com/privacy), không phải của chúng tôi.
 
