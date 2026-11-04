@@ -22,7 +22,7 @@ Support: gioitv86@gmail.com
 
 - **App name**: NaviCast
 - **Application ID**: `com.gioitv.navicast`
-- **Developer**: TRAN VAN GIOI (gioitv86@gmail.com)
+- **Developer**: Tri Tue Viet (Tran Van Gioi) (gioitv86@gmail.com)
 - **Source repository**: <https://github.com/gioiktvt/navicast> (private)
 
 ---

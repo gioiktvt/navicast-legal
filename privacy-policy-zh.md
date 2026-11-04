@@ -9,7 +9,7 @@ lang: zh-CN
 
 **应用名称**：NaviCast
 **应用 ID**：`com.gioitv.navicast`
-**开发者**：TRAN VAN GIOI（gioitv86@gmail.com）
+**开发者**：Tri Tue Viet（Tran Van Gioi）（gioitv86@gmail.com）
 **生效日期**：2026-05-08
 **最后更新**：2026-11-04
 

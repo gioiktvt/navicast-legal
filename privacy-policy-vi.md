@@ -9,7 +9,7 @@ lang: vi
 
 **Tên ứng dụng**: NaviCast
 **Application ID**: `com.gioitv.navicast`
-**Nhà phát triển**: TRAN VAN GIOI (gioitv86@gmail.com)
+**Nhà phát triển**: Tri Tue Viet (Tran Van Gioi) (gioitv86@gmail.com)
 **Ngày hiệu lực**: 2026-05-08
 **Cập nhật lần cuối**: 2026-11-04
 

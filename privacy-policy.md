@@ -9,7 +9,7 @@ lang: en
 
 **App name**: NaviCast
 **Application ID**: `com.gioitv.navicast`
-**Developer**: TRAN VAN GIOI (gioitv86@gmail.com)
+**Developer**: Tri Tue Viet (Tran Van Gioi) (gioitv86@gmail.com)
 **Effective date**: 2026-05-08
 **Last updated**: 2026-11-04
 
