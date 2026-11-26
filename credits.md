@@ -18,6 +18,7 @@ NaviCast is built on open data and open-source software. Thank you to everyone w
 | Map data, traffic camera locations | © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright) | [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) |
 | Map tiles | [OpenFreeMap](https://openfreemap.org) · © [OpenMapTiles](https://openmaptiles.org) | Tiles: ODbL (data) · Schema & style: [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) / BSD-3-Clause |
 | Routing, address search | © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright) | [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) |
+| Places and points of interest | © [Overture Maps Foundation](https://overturemaps.org) | Places: [CDLA-Permissive-2.0](https://cdla.dev/permissive-2-0/) · Foursquare portion: [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) |
 | Default speed limits | [OpenStreetMap wiki](https://wiki.openstreetmap.org/wiki/Default_speed_limits), via [osm-legal-default-speeds](https://github.com/westnordost/osm-legal-default-speeds) | [CC-BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) |
 
 ## Software included in the Android app

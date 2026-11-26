@@ -18,6 +18,7 @@ NaviCast 基于开放数据和开源软件构建。感谢所有为此做出贡�
 | 地图数据、交通摄像头位置 | © [OpenStreetMap 贡献者](https://www.openstreetmap.org/copyright) | [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) |
 | 地图瓦片 | [OpenFreeMap](https://openfreemap.org) · © [OpenMapTiles](https://openmaptiles.org) | 瓦片：ODbL（数据）· 架构与样式：[CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) / BSD-3-Clause |
 | 路线规划、地址搜索 | © [OpenStreetMap 贡献者](https://www.openstreetmap.org/copyright) | [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) |
+| 地点与兴趣点 | © [Overture Maps Foundation](https://overturemaps.org) | Places：[CDLA-Permissive-2.0](https://cdla.dev/permissive-2-0/) · Foursquare 部分：[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) |
 | 默认限速 | [OpenStreetMap wiki](https://wiki.openstreetmap.org/wiki/Default_speed_limits)，经由 [osm-legal-default-speeds](https://github.com/westnordost/osm-legal-default-speeds) | [CC-BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) |
 
 ## Android 应用包含的软件

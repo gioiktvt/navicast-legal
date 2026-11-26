@@ -18,6 +18,7 @@ NaviCast được xây dựng trên dữ liệu mở và phần mềm mã nguồ
 | Dữ liệu bản đồ, vị trí camera giao thông | © [Những người đóng góp OpenStreetMap](https://www.openstreetmap.org/copyright) | [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) |
 | Ô bản đồ | [OpenFreeMap](https://openfreemap.org) · © [OpenMapTiles](https://openmaptiles.org) | Ô bản đồ: ODbL (dữ liệu) · Lược đồ & kiểu: [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) / BSD-3-Clause |
 | Định tuyến, tìm địa chỉ | © [những người đóng góp OpenStreetMap](https://www.openstreetmap.org/copyright) | [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) |
+| Địa điểm, quán xá | © [Overture Maps Foundation](https://overturemaps.org) | Places: [CDLA-Permissive-2.0](https://cdla.dev/permissive-2-0/) · Phần dữ liệu Foursquare: [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) |
 | Giới hạn tốc độ mặc định | [OpenStreetMap wiki](https://wiki.openstreetmap.org/wiki/Default_speed_limits), qua [osm-legal-default-speeds](https://github.com/westnordost/osm-legal-default-speeds) | [CC-BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) |
 
 ## Phần mềm có trong app Android
