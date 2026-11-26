@@ -228,4 +228,4 @@ NaviCast 在其品牌、营销或商店展示的任何地方均不使用 Google 
 
 ---
 
-*本政策以简体中文编写。其他语言版本：[English](privacy-policy-en.md)、[Tiếng Việt](privacy-policy-vi.md)。所有版本具有同等法律效力；如有分歧，越南语版本适用于越南用户，简体中文版本适用于中国大陆用户，英语版本适用于其他地区。*
+*本政策以简体中文编写。其他语言版本：[English](privacy-policy.html)、[Tiếng Việt](privacy-policy-vi.html)。所有版本具有同等法律效力；如有分歧，越南语版本适用于越南用户，简体中文版本适用于中国大陆用户，英语版本适用于其他地区。*

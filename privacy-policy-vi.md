@@ -226,4 +226,4 @@ NaviCast là **ứng dụng độc lập của bên thứ ba**. NaviCast **khôn
 
 ---
 
-*Chính sách này được viết bằng tiếng Việt phổ thông. Bản tiếng Anh tại [privacy-policy-en.md](privacy-policy-en.md). Hai phiên bản có giá trị pháp lý tương đương; trong trường hợp có khác biệt, bản tiếng Việt áp dụng cho người dùng tại Việt Nam, bản tiếng Anh áp dụng cho khu vực khác.*
+*Chính sách này được viết bằng tiếng Việt phổ thông. Bản tiếng Anh tại [English](privacy-policy.html). Hai phiên bản có giá trị pháp lý tương đương; trong trường hợp có khác biệt, bản tiếng Việt áp dụng cho người dùng tại Việt Nam, bản tiếng Anh áp dụng cho khu vực khác.*

@@ -22,6 +22,7 @@ Support: gioitv86@gmail.com
 
 - **App name**: NaviCast
 - **Developer**: Tri Tue Viet (Tran Van Gioi) (gioitv86@gmail.com)
+- **Licenses & credits** (map data, open-source software): [English](credits.html) · [Tiếng Việt](credits-vi.html) · [简体中文](credits-zh.html)
 
 ---
 
