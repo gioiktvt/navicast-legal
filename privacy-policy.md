@@ -80,7 +80,7 @@ you are actively navigating:
 
 These requests do not carry your name, an account or any identifier created by NaviCast. Like any internet service, these providers can see your IP address.
 
-Apart from the place-search server used by the iPhone app (section 2d), NaviCast has **no server of its own**, keeps **no location history** anywhere but on your device,
+Apart from the place-search server (section 2d), NaviCast has **no server of its own**, keeps **no location history** anywhere but on your device,
 and **never uses location for advertising, analytics, or profiling**. On Android, NaviCast does **not** request
 background location access.
 
@@ -110,20 +110,20 @@ Android only. On iPhone:
 - There is no account, no advertising, no analytics and no tracking.
 
 
-## 2d. NaviCast place-search server (iPhone app)
+## 2d. NaviCast place-search server
 
-Since version 1.0.4, the iPhone app looks up places through NaviCast's own search server
-(`api.navicast.io.vn`) instead of contacting the place-search provider directly.
+Since iPhone version 1.0.4 and Android version 1.0.35, NaviCast looks up places through its own search
+server (`api.navicast.io.vn`) instead of contacting the place-search provider directly.
 
 - **What is sent**: the search term you type, the app's display language, and an **approximate position**
   (rounded to about 100 m) so that nearby results come first. When you press and hold a point on the map, or
   when the app needs to know which country you are in to show the right speed limits, the coordinates of
   that point are sent to look up its name and country.
 - **What is not kept**: the server **does not store and does not log** search terms, coordinates or IP
-  addresses. Your IP address is used only for a moment, in memory, to stop request floods and to count how many devices used the server each minute, and is never
-  written to disk or to a log. The server keeps only aggregate counts (for example, the number of searches
-  per minute) with no search term, position or IP address attached.
-- **No identifier**: requests carry no name, account or identifier created by NaviCast.
+  addresses.
+- **Abuse prevention**: the server uses Apple's, Google's or Huawei's app-verification service so that only the genuine
+  NaviCast app can use it. The technical data involved does not contain and is not linked to your name, account, search
+  terms, position or IP address.
 - To compile results, the server may pass the search term and approximate position on to the place-search
   providers listed in section 2b — without your IP address.
 - The server sits behind **Cloudflare**, which carries and protects the connection and, like any network
@@ -167,7 +167,7 @@ NaviCast uses store billing for purchases, and map service providers for the liv
 - ✅ **Huawei IAP** — the same role as Google Play Billing, for installs from AppGallery.
 - ✅ **Apple In-App Purchase** — the same role as Google Play Billing, for the iPhone app.
 - ✅ **Map service providers** — Ultimate tier on Android and the iPhone app, for map tiles, routing and place search. These receive your coordinates as described in section 2b.
-- ✅ **Cloudflare** — network provider in front of NaviCast's place-search server for the iPhone app. See section 2d.
+- ✅ **Cloudflare** — network provider in front of NaviCast's place-search server. See section 2d.
 
 **Google Play Billing.** When you choose to buy, NaviCast hands you off to the Google Play Store app, which collects and processes your payment entirely on its side. NaviCast only learns whether the unlock succeeded — never your card number, billing address, or any payment instrument. Google's handling of that payment data is governed by **Google's Privacy Policy** (https://policies.google.com/privacy), not by us.
 
@@ -189,7 +189,7 @@ Specifically:
 - We do not share with analytics providers.
 - We do not share with law enforcement (we have no data to provide).
 
-The first exception is **location on the Ultimate tier**: while you navigate, your coordinates go to the map service providers described in section 2b so they can return map tiles, a route, and place names. Those services are operated by third parties under their own privacy policies. We send them nothing but the coordinates and search terms needed for the request — no identifier, no account, no notification content. On iPhone, place searches go first to NaviCast's own search server, which does not keep them (section 2d).
+The first exception is **location on the Ultimate tier**: while you navigate, your coordinates go to the map service providers described in section 2b so they can return map tiles, a route, and place names. Those services are operated by third parties under their own privacy policies. We send them nothing but the coordinates and search terms needed for the request — no identifier, no account, no notification content. Place searches go first to NaviCast's own search server, which does not keep them (section 2d).
 
 The second exception is **payment processing**: if you make a purchase, your payment is handled directly between you and **Google Play**, under Google's own privacy policy. NaviCast neither receives nor forwards that payment data — we only learn whether the unlock succeeded.
 
@@ -216,7 +216,7 @@ If you live in the EU/UK (GDPR/UK DPA), the EEA, California (CCPA), or similar j
 ## 8. Security
 
 NaviCast follows defensive security practices:
-- Notification content is processed **on-device only**. The only NaviCast server is the place-search server used by the iPhone app (section 2d), which keeps no search terms, coordinates or IP addresses.
+- Notification content is processed **on-device only**. The only NaviCast server is the place-search server (section 2d), which keeps no search terms, coordinates or IP addresses.
 - Notification content is held in volatile memory (RAM) for the duration of one navigation session, then released.
 - No notification content is logged in release builds.
 

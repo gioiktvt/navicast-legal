@@ -19,7 +19,7 @@ This page summarizes, for transparency, what NaviCast declares in the Google Pla
 
 | Question | Answer |
 |---|---|
-| Does the app collect or share any of the required user data types? | **Yes — location only, on the Ultimate tier** |
+| Does the app collect or share any of the required user data types? | **Yes — location, and search terms when you search for a destination** |
 | Is collected data encrypted in transit? | **Yes** |
 | Can users request that their data be deleted? | N/A — nothing is stored off-device; revoking the location permission stops all transmission |
 
@@ -39,7 +39,8 @@ and retains no location history off-device. The Standard and Pro tiers never req
 
 ## Data types (Google Play taxonomy)
 
-For every data type Google Play lists except location, NaviCast's answer is **Not collected / Not shared**:
+For every data type Google Play lists except location and app activity, NaviCast's answer is
+**Not collected / Not shared**:
 
 | Category | Collected? | Shared? |
 |---|---|---|
@@ -52,11 +53,29 @@ For every data type Google Play lists except location, NaviCast's answer is **No
 | Files & docs | ❌ No | ❌ No |
 | Calendar | ❌ No | ❌ No |
 | Contacts | ❌ No | ❌ No |
-| App activity | ❌ No | ❌ No |
+| **App activity** (in-app search terms) | ✅ **Yes** — see note below | ❌ No |
 | Web browsing history | ❌ No | ❌ No |
 | App info & performance (crash logs, diagnostics) | ❌ No | ❌ No |
 | Device or other IDs | ❌ No | ❌ No |
-| **Location (approximate and precise)** | ✅ **Yes** — Ultimate tier only | ✅ **Yes** — to the map service providers above |
+| **Location (approximate and precise)** | ✅ **Yes** — see note below | ✅ **Yes** — to the map service providers above |
+
+### Note — what changed in Android 1.0.35
+
+Before 1.0.35 the only collected type was **location**, and only on the Ultimate tier. From 1.0.35
+NaviCast looks up places through its own search server (`api.navicast.io.vn`), so two entries change
+for **all tiers**, not just Ultimate:
+
+| Data type | Purpose | Shared? | Stored? | Optional? |
+|---|---|---|---|---|
+| **App activity** — the destination you type into the search box | App functionality (finding a destination) | ❌ No | ❌ No — the server keeps no search terms | Yes: searching is a thing you choose to do |
+| **Location (approximate)** — rounded to ~100 m, sent with a search so nearby results come first | App functionality | ❌ No | ❌ No | Yes: searching works without it, results are just less local |
+
+Both are **encrypted in transit** and **not stored**. Neither is linked to a user account — NaviCast
+has none. Navigation notification content is still **never transmitted anywhere**; this entry covers
+only what you yourself type into the search box.
+
+Precise location on the Ultimate tier is unchanged: it goes to the map service providers while you
+navigate, as before.
 
 → All data types except **location**: not collected, not shared. Location: collected and shared,
 for **App functionality**, optional, Ultimate tier only, encrypted in transit.

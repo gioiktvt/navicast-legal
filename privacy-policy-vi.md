@@ -80,7 +80,7 @@ trên, và chỉ trong lúc bạn đang dẫn đường:
 
 Các yêu cầu này không kèm tên, tài khoản hay mã định danh nào do NaviCast tạo ra. Như mọi dịch vụ Internet, các nhà cung cấp này nhìn thấy địa chỉ IP của bạn.
 
-Ngoài máy chủ tìm địa điểm của bản iPhone (mục 2d), NaviCast **không có máy chủ riêng**, **không lưu lịch sử vị trí** của bạn ở đâu ngoài chính máy bạn,
+Ngoài máy chủ tìm địa điểm (mục 2d), NaviCast **không có máy chủ riêng**, **không lưu lịch sử vị trí** của bạn ở đâu ngoài chính máy bạn,
 và **không dùng vị trí cho quảng cáo, phân tích hay lập hồ sơ người dùng**. Trên Android, NaviCast **không** xin
 quyền vị trí nền.
 
@@ -108,19 +108,19 @@ mọi nội dung về đọc thông báo Google Maps trong chính sách này ch�
 - Không có tài khoản, không quảng cáo, không phân tích, không theo dõi.
 
 
-## 2d. Máy chủ tìm địa điểm của NaviCast (bản iPhone)
+## 2d. Máy chủ tìm địa điểm của NaviCast
 
-Từ phiên bản 1.0.4, bản iPhone tìm địa điểm qua máy chủ tìm kiếm riêng của NaviCast
+Từ bản iPhone 1.0.4 và bản Android 1.0.35, NaviCast tìm địa điểm qua máy chủ tìm kiếm riêng của mình
 (`api.navicast.io.vn`) thay vì gọi thẳng tới nhà cung cấp dịch vụ tìm địa điểm.
 
 - **Những gì được gửi**: từ khoá bạn gõ, ngôn ngữ hiển thị của app, và **vị trí gần đúng** (làm tròn khoảng
   100 m) để kết quả gần bạn hiện trước. Khi bạn nhấn giữ một điểm trên bản đồ, hoặc khi app cần biết bạn đang
   ở nước nào để hiện đúng giới hạn tốc độ, toạ độ của điểm đó được gửi đi để tra tên và nước.
 - **Những gì không giữ lại**: máy chủ **không lưu và không ghi nhật ký** từ khoá tìm kiếm, toạ độ hay địa chỉ
-  IP. Địa chỉ IP chỉ được dùng thoáng qua, trong bộ nhớ, để chặn gọi dồn và đếm số máy dùng máy chủ mỗi phút, và không bao giờ được ghi xuống đĩa
-  hay vào nhật ký. Máy chủ chỉ giữ số đếm tổng (ví dụ số lượt tìm mỗi phút), không gắn với từ khoá, vị trí hay
-  địa chỉ IP nào.
-- **Không có mã định danh**: yêu cầu không kèm tên, tài khoản hay mã định danh nào do NaviCast tạo ra.
+  IP.
+- **Chống lạm dụng**: máy chủ dùng dịch vụ xác thực ứng dụng của Apple, Google hoặc Huawei để chỉ ứng dụng NaviCast thật
+  mới dùng được máy chủ. Dữ liệu kỹ thuật của dịch vụ này không chứa và không gắn với tên, tài khoản, từ khoá tìm kiếm, vị
+  trí hay địa chỉ IP của bạn.
 - Để tổng hợp kết quả, máy chủ có thể chuyển từ khoá và vị trí gần đúng tới các nhà cung cấp dịch vụ tìm địa
   điểm nêu ở mục 2b — không kèm địa chỉ IP của bạn.
 - Máy chủ đặt sau **Cloudflare**, đơn vị chuyển tải và bảo vệ kết nối; như mọi nhà cung cấp mạng, Cloudflare
@@ -163,7 +163,7 @@ NaviCast dùng dịch vụ thanh toán của cửa hàng ứng dụng để xử
 - ✅ **Huawei IAP** — vai trò như Google Play Billing, cho bản cài từ AppGallery.
 - ✅ **Apple In-App Purchase** — vai trò giống Google Play Billing, cho bản iPhone.
 - ✅ **Nhà cung cấp dịch vụ bản đồ** — bản Ultimate trên Android và bản iPhone, dùng cho ô bản đồ, định tuyến và tìm địa điểm. Các dịch vụ này nhận toạ độ của bạn như nêu ở mục 2b.
-- ✅ **Cloudflare** — nhà cung cấp mạng đứng trước máy chủ tìm địa điểm của NaviCast cho bản iPhone. Xem mục 2d.
+- ✅ **Cloudflare** — nhà cung cấp mạng đứng trước máy chủ tìm địa điểm của NaviCast. Xem mục 2d.
 
 **Google Play Billing.** Khi bạn chọn mua, NaviCast chuyển bạn sang ứng dụng Google Play Store; Play Store thu thập và xử lý thanh toán hoàn toàn ở phía họ. NaviCast chỉ biết việc mở khoá có thành công hay không — không bao giờ nhận số thẻ, địa chỉ thanh toán hay phương tiện thanh toán. Việc Google xử lý dữ liệu thanh toán đó tuân theo **Chính sách Bảo mật của Google** (https://policies.google.com/privacy), không phải của chúng tôi.
 
@@ -185,7 +185,7 @@ Cụ thể:
 - Không chia sẻ với analytics provider.
 - Không chia sẻ với cơ quan thực thi pháp luật (chúng tôi không có dữ liệu để cung cấp).
 
-Ngoại lệ thứ nhất là **vị trí ở bản Ultimate**: trong lúc bạn dẫn đường, toạ độ được gửi tới các nhà cung cấp dịch vụ bản đồ nêu ở mục 2b để nhận về ô bản đồ, tuyến đường và tên địa điểm. Các dịch vụ này do bên thứ ba vận hành theo chính sách riêng của họ. Chúng tôi chỉ gửi đúng toạ độ và từ khoá cần cho yêu cầu đó — không kèm mã định danh, tài khoản, hay nội dung thông báo. Trên iPhone, lượt tìm địa điểm đi qua máy chủ tìm kiếm riêng của NaviCast trước, và máy chủ này không giữ lại chúng (mục 2d).
+Ngoại lệ thứ nhất là **vị trí ở bản Ultimate**: trong lúc bạn dẫn đường, toạ độ được gửi tới các nhà cung cấp dịch vụ bản đồ nêu ở mục 2b để nhận về ô bản đồ, tuyến đường và tên địa điểm. Các dịch vụ này do bên thứ ba vận hành theo chính sách riêng của họ. Chúng tôi chỉ gửi đúng toạ độ và từ khoá cần cho yêu cầu đó — không kèm mã định danh, tài khoản, hay nội dung thông báo. Lượt tìm địa điểm đi qua máy chủ tìm kiếm riêng của NaviCast trước, và máy chủ này không giữ lại chúng (mục 2d).
 
 Ngoại lệ thứ hai là **xử lý thanh toán**: nếu bạn mua hàng, giao dịch diễn ra trực tiếp giữa bạn và **Google Play**, theo chính sách bảo mật riêng của Google. NaviCast không nhận và không chuyển tiếp dữ liệu thanh toán đó — chúng tôi chỉ biết việc mở khoá có thành công hay không.
 
@@ -212,7 +212,7 @@ Nếu bạn ở EU/UK (GDPR/UK DPA), EEA, California (CCPA) hoặc các khu vự
 ## 8. Bảo mật
 
 NaviCast tuân thủ best practice bảo mật:
-- Nội dung thông báo chỉ được xử lý **trên thiết bị**. Máy chủ duy nhất của NaviCast là máy chủ tìm địa điểm của bản iPhone (mục 2d), không giữ từ khoá tìm kiếm, toạ độ hay địa chỉ IP.
+- Nội dung thông báo chỉ được xử lý **trên thiết bị**. Máy chủ duy nhất của NaviCast là máy chủ tìm địa điểm (mục 2d), không giữ từ khoá tìm kiếm, toạ độ hay địa chỉ IP.
 - Nội dung thông báo giữ trong RAM tạm thời cho 1 phiên dẫn đường, sau đó giải phóng.
 - Nội dung thông báo **không bao giờ** được ghi nhật ký trong bản phát hành.
 
