@@ -22,7 +22,7 @@ NaviCast là ứng dụng Android đi kèm điện thoại, chuyển biểu tư�
 
 **Nội dung thông báo — chữ hướng rẽ, địa chỉ, thời gian tới nơi, tên địa điểm mà NaviCast đọc — không bao giờ được thu thập, lưu trữ hay truyền ra khỏi thiết bị của bạn, ở bất kỳ phiên bản nào.** Nó được xử lý cục bộ rồi bỏ đi.
 
-Thứ duy nhất rời khỏi điện thoại là **vị trí**, và chỉ ở bản Ultimate khi bạn bật bản đồ trực tiếp: toạ độ được gửi tới các nhà cung cấp dịch vụ bản đồ để nhận về ô bản đồ, tuyến đường và tên địa điểm. Xem mục 2b.
+Có hai thứ có thể rời khỏi điện thoại: **từ khoá bạn gõ khi tìm địa điểm**, kèm vị trí gần đúng (mọi phiên bản, mục 2d), và **vị trí** ở bản Ultimate khi bạn bật bản đồ trực tiếp (mục 2b). Không thứ nào được lưu trên máy chủ của NaviCast.
 
 Nếu bạn chỉ có thời gian đọc 1 dòng:
 - ❌ Không có tài khoản, không cần đăng nhập.
@@ -30,6 +30,7 @@ Nếu bạn chỉ có thời gian đọc 1 dòng:
 - ❌ Nội dung thông báo (chữ, địa điểm, ETA, tên đường) **không bao giờ** được upload, không lưu lên server, không chia sẻ với bên thứ ba.
 - ❌ Không truy cập danh bạ, micro, camera, SMS hay bộ nhớ.
 - ⚠️ **Vị trí** — chỉ bản Ultimate, và chỉ khi bạn bật bản đồ trực tiếp. Xem mục 2b.
+- ⚠️ **Tìm địa điểm** — từ khoá bạn gõ và vị trí gần đúng được gửi đi để tìm địa điểm, không lưu lại. Xem mục 2d.
 - ✅ Đọc thông báo của Google Maps (chỉ Google Maps) trên máy bạn, dịch sang biểu tượng cho đồng hồ, rồi chuyển sang đồng hồ đã ghép nối.
 - 💳 NaviCast miễn phí dùng thử. Sau thời gian dùng thử, **một lần mua trong ứng dụng** sẽ mở khoá vĩnh viễn. Giao dịch do **Google Play Billing** xử lý hoàn toàn — NaviCast không bao giờ thấy, không xử lý và không lưu thông tin thẻ của bạn, và không gắn giao dịch với bất kỳ tài khoản nào của chúng tôi (chúng tôi không có tài khoản nào).
 
@@ -37,12 +38,13 @@ Nếu bạn chỉ có thời gian đọc 1 dòng:
 
 ## 2. Dữ liệu thu thập
 
-**KHÔNG.** NaviCast không thu thập, không truyền và không lưu trữ bất kỳ dữ liệu cá nhân nào. Cụ thể:
+NaviCast **không thu thập dữ liệu cá nhân** — không tên, không tài khoản, không mã định danh thiết bị. Chỉ lượt tìm địa điểm (mục 2d) và, ở bản Ultimate, vị trí (mục 2b) rời khỏi máy bạn, và không thứ nào được lưu trên máy chủ của NaviCast. Cụ thể:
 
 | Loại dữ liệu | Có thu thập? | Ghi chú |
 |---|---|---|
 | Định danh cá nhân (tên, email, số điện thoại, ID tài khoản) | ❌ Không | App không có hệ thống tài khoản |
 | Vị trí | ⚠️ Có — chỉ bản Ultimate | Dùng cho bản đồ trực tiếp và dẫn đường độc lập; toạ độ được gửi tới các nhà cung cấp dịch vụ bản đồ. Xem mục 2b |
+| Từ khoá tìm địa điểm | ⚠️ Gửi đi, không lưu | Từ khoá bạn gõ và vị trí gần đúng, để tìm địa điểm. Xem mục 2d |
 | Danh bạ, SMS, lịch sử cuộc gọi | ❌ Không | Các quyền này **không** được xin |
 | Nội dung thông báo (chữ hướng rẽ của Google Maps, địa danh) | ⚠️ Đọc tại chỗ | Chỉ dùng để vẽ biểu tượng + nhãn khoảng cách trên 1 thông báo cục bộ. **Không** lưu, không ghi nhật ký, không truyền. |
 | Định danh thiết bị (IMEI, advertising ID) | ❌ Không | App **không** đọc device IDs |
@@ -96,8 +98,8 @@ mọi nội dung về đọc thông báo Google Maps trong chính sách này ch�
 - **Vị trí** (chính xác) dùng để hiện chỗ bạn đang đứng, tính tuyến và bám tuyến. Chỉ chạy nền **trong
   lúc đang dẫn đường**, và dừng khi bạn bấm Dừng hoặc tới nơi.
 - **Vị trí và tên địa điểm bạn tìm được gửi tới các dịch vụ bản đồ nêu ở mục 2b**, chỉ để vẽ bản đồ, tính
-  tuyến, tìm địa điểm và đọc giới hạn tốc độ. Lượt tìm địa điểm đi qua máy chủ tìm kiếm riêng của NaviCast
-  trước (mục 2d). NaviCast không lưu lịch sử chuyến đi.
+  tuyến, tìm địa điểm và đọc giới hạn tốc độ. Lượt tìm địa điểm được xử lý như
+  nêu ở mục 2d. NaviCast không lưu lịch sử chuyến đi.
 - **Bluetooth** chỉ dùng để gửi chỉ đường sang đồng hồ HUAWEI đã ghép đôi của chính bạn, qua kết nối đồng
   hồ do ứng dụng HUAWEI Sức khỏe quản lý.
 - **Thông báo** là tuỳ chọn. Khi app đồng hồ không chạy, mỗi khúc rẽ được đăng thành thông báo cục bộ
@@ -110,8 +112,7 @@ mọi nội dung về đọc thông báo Google Maps trong chính sách này ch�
 
 ## 2d. Máy chủ tìm địa điểm của NaviCast
 
-Từ bản iPhone 1.0.4 và bản Android 1.0.35, NaviCast tìm địa điểm qua máy chủ tìm kiếm riêng của mình
-(`api.navicast.io.vn`) thay vì gọi thẳng tới nhà cung cấp dịch vụ tìm địa điểm.
+Từ bản iPhone 1.0.4 và bản Android 1.0.35, NaviCast tìm địa điểm qua máy chủ tìm kiếm riêng của mình.
 
 - **Những gì được gửi**: từ khoá bạn gõ, ngôn ngữ hiển thị của app, và **vị trí gần đúng** (làm tròn khoảng
   100 m) để kết quả gần bạn hiện trước. Khi bạn nhấn giữ một điểm trên bản đồ, hoặc khi app cần biết bạn đang
@@ -125,12 +126,14 @@ Từ bản iPhone 1.0.4 và bản Android 1.0.35, NaviCast tìm địa điểm q
   điểm nêu ở mục 2b — không kèm địa chỉ IP của bạn.
 - Máy chủ đặt sau **Cloudflare**, đơn vị chuyển tải và bảo vệ kết nối; như mọi nhà cung cấp mạng, Cloudflare
   nhìn thấy địa chỉ IP của bạn, theo chính sách bảo mật riêng của họ (https://www.cloudflare.com/privacypolicy/).
-- Nếu máy chủ không trả lời được, app tự quay về hỏi thẳng nhà cung cấp dịch vụ tìm địa điểm như nêu ở mục 2b.
+- Lượt tìm cũng có thể được gửi thẳng tới các nhà cung cấp dịch vụ tìm địa điểm nêu ở mục 2b.
 
 ---
 
 
 ## 3. Quyền yêu cầu
+
+*Mục này nói về bản Android. Bản iPhone xem mục 2c.*
 
 NaviCast chỉ xin **đúng tối thiểu** quyền cần để hoạt động:
 
@@ -177,7 +180,7 @@ Mini program chỉ đọc kích thước và hình dạng màn hình đồng h�
 
 ## 5. Chia sẻ dữ liệu
 
-Ngoài hai trường hợp dưới đây, chúng tôi **không chia sẻ dữ liệu với bất kỳ ai**, và không có gì khác rời khỏi thiết bị của bạn. **Nội dung thông báo không bao giờ được truyền đi đâu, ở bất kỳ phiên bản nào.**
+Ngoài các trường hợp dưới đây, chúng tôi **không chia sẻ dữ liệu với bất kỳ ai**, và không có gì khác rời khỏi thiết bị của bạn. **Nội dung thông báo không bao giờ được truyền đi đâu, ở bất kỳ phiên bản nào.**
 
 Cụ thể:
 - Không bán dữ liệu của bạn.
@@ -185,9 +188,9 @@ Cụ thể:
 - Không chia sẻ với analytics provider.
 - Không chia sẻ với cơ quan thực thi pháp luật (chúng tôi không có dữ liệu để cung cấp).
 
-Ngoại lệ thứ nhất là **vị trí ở bản Ultimate**: trong lúc bạn dẫn đường, toạ độ được gửi tới các nhà cung cấp dịch vụ bản đồ nêu ở mục 2b để nhận về ô bản đồ, tuyến đường và tên địa điểm. Các dịch vụ này do bên thứ ba vận hành theo chính sách riêng của họ. Chúng tôi chỉ gửi đúng toạ độ và từ khoá cần cho yêu cầu đó — không kèm mã định danh, tài khoản, hay nội dung thông báo. Lượt tìm địa điểm đi qua máy chủ tìm kiếm riêng của NaviCast trước, và máy chủ này không giữ lại chúng (mục 2d).
+Ngoại lệ thứ nhất là **vị trí ở bản Ultimate**: trong lúc bạn dẫn đường, toạ độ được gửi tới các nhà cung cấp dịch vụ bản đồ nêu ở mục 2b để nhận về ô bản đồ, tuyến đường và tên địa điểm. Các dịch vụ này do bên thứ ba vận hành theo chính sách riêng của họ. Chúng tôi chỉ gửi đúng toạ độ và từ khoá cần cho yêu cầu đó — không kèm mã định danh, tài khoản, hay nội dung thông báo. Lượt tìm địa điểm, ở mọi phiên bản, đi qua máy chủ tìm kiếm riêng của NaviCast, và máy chủ này không giữ lại chúng (mục 2d).
 
-Ngoại lệ thứ hai là **xử lý thanh toán**: nếu bạn mua hàng, giao dịch diễn ra trực tiếp giữa bạn và **Google Play**, theo chính sách bảo mật riêng của Google. NaviCast không nhận và không chuyển tiếp dữ liệu thanh toán đó — chúng tôi chỉ biết việc mở khoá có thành công hay không.
+Ngoại lệ thứ hai là **xử lý thanh toán**: nếu bạn mua hàng, giao dịch diễn ra trực tiếp giữa bạn và cửa hàng ứng dụng (**Google Play**, **AppGallery** hoặc **Apple**), theo chính sách bảo mật riêng của cửa hàng đó. NaviCast không nhận và không chuyển tiếp dữ liệu thanh toán đó — chúng tôi chỉ biết việc mở khoá có thành công hay không.
 
 ---
 
@@ -199,7 +202,7 @@ NaviCast không nhắm tới trẻ em dưới 13 tuổi. App không cố ý thu 
 
 ## 7. Quyền của bạn
 
-Vì NaviCast không thu thập dữ liệu, không có dữ liệu nào để truy cập, xoá hay export. Tuy nhiên:
+Vì NaviCast không lưu dữ liệu cá nhân nào trên máy chủ, không có gì để truy cập, xoá hay xuất ra. Tuy nhiên:
 
 - **Để dừng app đọc thông báo**: thu hồi quyền (Cài đặt → Ứng dụng → Quyền đặc biệt → Quyền truy cập thông báo → NaviCast → tắt).
 - **Để dừng app hoàn toàn**: gỡ cài đặt. Toàn bộ cài đặt local sẽ bị xoá.
@@ -225,7 +228,7 @@ Nếu chính sách thay đổi:
 2. Ghi chú trong phần giới thiệu bản cập nhật.
 3. Nếu thay đổi mang tính trọng yếu (vd nếu chúng tôi bao giờ bắt đầu thu thập dữ liệu — chưa có kế hoạch nào như vậy), chúng tôi sẽ yêu cầu user đồng ý explicit trước khi thay đổi có hiệu lực.
 
-Bạn có thể xem phiên bản hiện tại tại: `https://gioiktvt.github.io/navicast-legal/privacy-policy-vi.html` (Tiếng Việt) hoặc `https://gioiktvt.github.io/navicast-legal/privacy-policy.html` (English).
+Bạn có thể xem phiên bản hiện tại tại: `https://gioiktvt.github.io/navicast-legal/privacy-policy-vi.html` (Tiếng Việt) `https://gioiktvt.github.io/navicast-legal/privacy-policy.html` (English) hoặc `https://gioiktvt.github.io/navicast-legal/privacy-policy-zh.html` (简体中文).
 
 ---
 

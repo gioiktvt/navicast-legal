@@ -22,7 +22,7 @@ NaviCast is an Android companion app that forwards turn-by-turn navigation icons
 
 **Notification content — the turn text, addresses, ETA and place names NaviCast reads — is never collected, stored, or transmitted off your device, on any tier.** It is processed locally and discarded.
 
-The one thing that does leave your phone is **location**, and only on the Ultimate tier once you enable the live map: coordinates go to map service providers so they can return map tiles, a route and place names. See section 2b.
+Two things can leave your phone: **what you type into place search**, with an approximate position (all tiers, section 2d), and **location** on the Ultimate tier once you enable the live map (section 2b). Neither is stored on a NaviCast server.
 
 If you read nothing else, read this:
 - ❌ No user accounts, no login.
@@ -30,6 +30,7 @@ If you read nothing else, read this:
 - ❌ No notification content (text, addresses, ETA, place names) is ever uploaded, stored on a server, or shared with third parties.
 - ❌ No contacts, microphone, camera, SMS, or storage access.
 - ⚠️ **Location** — Ultimate tier only, and only once you enable the live map. See section 2b.
+- ⚠️ **Place search** — the term you type and an approximate position are sent to find places, and are not stored. See section 2d.
 - ✅ Reads Google Maps notifications (only) on your device, converts them to a watch-friendly notification, and hands it to the paired watch.
 - 💳 NaviCast is free to try. After a free trial period, a **one-time in-app purchase** unlocks the app permanently. The purchase is processed entirely by **Google Play Billing** — NaviCast never sees, handles, or stores your payment-card details, and no purchase is tied to any account we hold (we hold none).
 
@@ -37,12 +38,13 @@ If you read nothing else, read this:
 
 ## 2. Data we collect
 
-**None.** NaviCast does not collect, transmit, or persist any personal data. Specifically:
+NaviCast collects **no personal data** — no name, account or device identifier. Only place searches (section 2d) and, on the Ultimate tier, location (section 2b) leave your device, and neither is stored on a NaviCast server. Specifically:
 
 | Data type | Collected? | Notes |
 |---|---|---|
 | Personal identifiers (name, email, phone, account ID) | ❌ No | App has no account system |
 | Location | ⚠️ Yes — Ultimate tier only | Powers the live map and standalone navigation; coordinates are sent to map service providers. See section 2b |
+| Place-search terms | ⚠️ Sent, not stored | The term you type and an approximate position, to find places. See section 2d |
 | Contacts, SMS, call logs | ❌ No | These permissions are **not requested** |
 | Notification content (Google Maps maneuver text, addresses) | ⚠️ Read only on-device | Used only to render an icon + distance label on a local notification. Never persisted, logged, or transmitted. |
 | Device identifiers (IMEI, advertising ID) | ❌ No | App does **not** read device IDs |
@@ -99,7 +101,7 @@ Android only. On iPhone:
   background **only during an active trip**, and stops when you press Stop or arrive.
 - **Your position and the place names you search for are sent to the mapping services listed in
   section 2b**, solely to draw the map, build the route, find places and read speed limits. Place
-  searches go first to NaviCast's own search server (section 2d). NaviCast keeps no trip history.
+  searches are handled as described in section 2d. NaviCast keeps no trip history.
 - **Bluetooth** is used only to send directions to your own paired HUAWEI watch, through the watch
   connection already managed by the HUAWEI Health app.
 - **Notifications** are optional. If the watch app is not running, each turn is posted as an ordinary
@@ -113,7 +115,7 @@ Android only. On iPhone:
 ## 2d. NaviCast place-search server
 
 Since iPhone version 1.0.4 and Android version 1.0.35, NaviCast looks up places through its own search
-server (`api.navicast.io.vn`) instead of contacting the place-search provider directly.
+server.
 
 - **What is sent**: the search term you type, the app's display language, and an **approximate position**
   (rounded to about 100 m) so that nearby results come first. When you press and hold a point on the map, or
@@ -128,13 +130,14 @@ server (`api.navicast.io.vn`) instead of contacting the place-search provider di
   providers listed in section 2b — without your IP address.
 - The server sits behind **Cloudflare**, which carries and protects the connection and, like any network
   provider, sees your IP address, under its own privacy policy (https://www.cloudflare.com/privacypolicy/).
-- If the server is unavailable, the app falls back to asking the place-search provider directly, as described
-  in section 2b.
+- Searches may also be sent directly to the place-search providers listed in section 2b.
 
 ---
 
 
 ## 3. Permissions we request
+
+*This section describes the Android app. For the iPhone app, see section 2c.*
 
 NaviCast requests **only** the minimum permissions needed to do its job:
 
@@ -181,7 +184,7 @@ The mini program only reads the watch's screen size and shape, and keeps your di
 
 ## 5. Data sharing
 
-Apart from the two cases below, we share **no data with anyone**, and nothing else leaves your device. **Notification content is never transmitted anywhere, under any tier.**
+Apart from the cases below, we share **no data with anyone**, and nothing else leaves your device. **Notification content is never transmitted anywhere, under any tier.**
 
 Specifically:
 - We do not sell your data.
@@ -189,9 +192,9 @@ Specifically:
 - We do not share with analytics providers.
 - We do not share with law enforcement (we have no data to provide).
 
-The first exception is **location on the Ultimate tier**: while you navigate, your coordinates go to the map service providers described in section 2b so they can return map tiles, a route, and place names. Those services are operated by third parties under their own privacy policies. We send them nothing but the coordinates and search terms needed for the request — no identifier, no account, no notification content. Place searches go first to NaviCast's own search server, which does not keep them (section 2d).
+The first exception is **location on the Ultimate tier**: while you navigate, your coordinates go to the map service providers described in section 2b so they can return map tiles, a route, and place names. Those services are operated by third parties under their own privacy policies. We send them nothing but the coordinates and search terms needed for the request — no identifier, no account, no notification content. Place searches, on every tier, go to NaviCast's own search server, which does not keep them (section 2d).
 
-The second exception is **payment processing**: if you make a purchase, your payment is handled directly between you and **Google Play**, under Google's own privacy policy. NaviCast neither receives nor forwards that payment data — we only learn whether the unlock succeeded.
+The second exception is **payment processing**: if you make a purchase, your payment is handled directly between you and the app store (**Google Play**, **AppGallery** or **Apple**), under that store's own privacy policy. NaviCast neither receives nor forwards that payment data — we only learn whether the unlock succeeded.
 
 ---
 
@@ -203,7 +206,7 @@ NaviCast is not directed at children under 13. The app does not knowingly collec
 
 ## 7. Your rights
 
-Because NaviCast collects no data, there is no data to access, delete, or export. However:
+Because NaviCast stores no personal data on any server, there is nothing to access, delete, or export. However:
 
 - **To stop the app from reading notifications**: revoke notification access (Settings → Apps → Special access → Notification access → NaviCast → off).
 - **To stop the app entirely**: uninstall it. All local settings are wiped.
@@ -229,7 +232,7 @@ If we ever change this policy, we will:
 2. Note the change in the app's release notes.
 3. If the change is material (e.g., we ever started collecting any data — which we have no plans to do), we will require explicit user consent before the change takes effect.
 
-You can check the current version at: `https://gioiktvt.github.io/navicast-legal/privacy-policy.html` (English) or `https://gioiktvt.github.io/navicast-legal/privacy-policy-vi.html` (Vietnamese).
+You can check the current version at: `https://gioiktvt.github.io/navicast-legal/privacy-policy.html` (English) or `https://gioiktvt.github.io/navicast-legal/privacy-policy-vi.html` (Vietnamese) or `https://gioiktvt.github.io/navicast-legal/privacy-policy-zh.html` (Simplified Chinese).
 
 ---
 
@@ -252,4 +255,4 @@ NaviCast is an **independent third-party companion app**. It is **not affiliated
 
 ---
 
-*This policy is written in plain English. The Vietnamese version is at [privacy-policy-vi.md](privacy-policy-vi.md). Both versions are legally equivalent; in case of disagreement, the Vietnamese version controls for users in Vietnam, the English version controls elsewhere.*
+*This policy is written in plain English. The Vietnamese version is at [privacy-policy-vi.html](privacy-policy-vi.html). Both versions are legally equivalent; in case of disagreement, the Vietnamese version controls for users in Vietnam, the English version controls elsewhere.*

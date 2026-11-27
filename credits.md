@@ -11,15 +11,15 @@ NaviCast is built on open data and open-source software. Thank you to everyone w
 
 *Other languages: [Tiếng Việt](credits-vi.html) · [简体中文](credits-zh.html)*
 
-## Map data and services
+## Data and services
 
-| What | Source | License |
-|---|---|---|
-| Map data, traffic camera locations | © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright) | [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) |
-| Map tiles | [OpenFreeMap](https://openfreemap.org) · © [OpenMapTiles](https://openmaptiles.org) | Tiles: ODbL (data) · Schema & style: [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) / BSD-3-Clause |
-| Routing, address search | © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright) | [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) |
-| Places and points of interest | © [Overture Maps Foundation](https://overturemaps.org) | Places: [CDLA-Permissive-2.0](https://cdla.dev/permissive-2-0/) · Foursquare portion: [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) |
-| Default speed limits | [OpenStreetMap wiki](https://wiki.openstreetmap.org/wiki/Default_speed_limits), via [osm-legal-default-speeds](https://github.com/westnordost/osm-legal-default-speeds) | [CC-BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) |
+| Source | License |
+|---|---|
+| © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright) | [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) |
+| [OpenFreeMap](https://openfreemap.org) · © [OpenMapTiles](https://openmaptiles.org) | ODbL (data) · Schema & style: [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) / BSD-3-Clause |
+| © [Overture Maps Foundation](https://overturemaps.org) | Places: [CDLA-Permissive-2.0](https://cdla.dev/permissive-2-0/) · Foursquare portion: [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) |
+| Powered by [Geoapify](https://www.geoapify.com/) · © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright) | [Geoapify terms](https://www.geoapify.com/terms-and-conditions/) · data [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) |
+| [OpenStreetMap wiki](https://wiki.openstreetmap.org/wiki/Default_speed_limits), via [osm-legal-default-speeds](https://github.com/westnordost/osm-legal-default-speeds) | [CC-BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) |
 
 ## Software included in the apps
 
@@ -31,9 +31,9 @@ NaviCast is built on open data and open-source software. Thank you to everyone w
 | [Material Icons / Material Symbols](https://github.com/google/material-design-icons) | © Google | [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) |
 | [Kotlin Coroutines](https://github.com/Kotlin/kotlinx.coroutines), [kotlinx.serialization](https://github.com/Kotlin/kotlinx.serialization) | © JetBrains s.r.o. | [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) |
 | [Timber](https://github.com/JakeWharton/timber) | © Jake Wharton | [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) |
-| [Noto Sans](https://fonts.google.com/noto) (map labels) | © Google | [SIL Open Font License 1.1](https://openfontlicense.org/) |
-| Google Play services (location, maps), Google Play Billing, Play Integrity | © Google LLC | [Google APIs Terms of Service](https://developers.google.com/terms) |
-| Huawei Wear Engine, Huawei IAP, AppGallery Connect, Safety Detect | © Huawei Technologies Co., Ltd. | [Huawei Developer Agreement](https://developer.huawei.com/consumer/en/doc/start/agreement-0000001050063465) |
+| [Noto Sans](https://fonts.google.com/noto) | © Google | [SIL Open Font License 1.1](https://openfontlicense.org/) |
+| Google Play services, Google Play Billing | © Google LLC | [Google APIs Terms of Service](https://developers.google.com/terms) |
+| Huawei Wear Engine, Huawei IAP, AppGallery Connect | © Huawei Technologies Co., Ltd. | [Huawei Developer Agreement](https://developer.huawei.com/consumer/en/doc/start/agreement-0000001050063465) |
 
 ### BSD-3-Clause (libwebp)
 
